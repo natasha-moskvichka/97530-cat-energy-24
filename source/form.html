@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <title>Form</title>
@@ -36,9 +36,9 @@
   <section class="selection-program">
     <h1 class="selection-program__title">Подбор программы</h1>
     <p class="selection-program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
-    <form method="post" action="https://echo.htmlacademy.ru" class="ad-form" autocomplete="off">
+    <form method="post" action="https://echo.htmlacademy.ru" class="ad-form" name="main-form" autocomplete="off">
 
-      <fieldset class="ad-form-header">
+      <fieldset class="ad-form__header">
         <label class="ad-form__label"> Имя:*
           <input type="text" name="name" placeholder="Барсик" required>
         </label>
@@ -50,7 +50,7 @@
         </label>
       </fieldset>
 
-      <fieldset class="ad-form-header">
+      <fieldset class="ad-form__header">
         <input type="radio" name="lose-weight" id="lose-weight">
         <label class="ad-form__label" for="lose-weight">Похудение</label>
 
@@ -61,8 +61,8 @@
         <label class="ad-form__label" for="unknown">Не знаю (нужен ваш совет)</label>
       </fieldset>
 
-      <fieldset class="ad-form-header">
-        <legend class="ad-form-header__title">Контактные данные</legend>
+      <fieldset class="ad-form__header">
+        <legend class="ad-form__header-title">Контактные данные</legend>
         <label class="ad-form__label"> E-mail:*
           <input type="text" name="name" placeholder="kuklachev@gmail.com" required>
         </label>
@@ -71,15 +71,15 @@
         </label>
       </fieldset>
 
-      <fieldset class="ad-form-header">
-        <legend class="ad-form-header__title">Комментарий</legend>
+      <fieldset class="ad-form__header">
+        <legend class="ad-form__header-title">Комментарий</legend>
         <label class="ad-form__label">
           <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
         </label>
       </fieldset>
 
-      <fieldset class="ad-form-header">
-        <legend class="ad-form-header__title">Дополнительно</legend>
+      <fieldset class="ad-form__header">
+        <legend class="ad-form__header-title">Дополнительно</legend>
 
         <input type="checkbox" name="no-sugar" id="no-sugar">
         <label class="ad-form__label" for="no-sugar">Сахарозаменитель</label>
@@ -94,7 +94,7 @@
         <label class="ad-form__label" for="vitamins">Витамины</label>
       </fieldset>
 
-      <fieldset class="ad-form-header">
+      <fieldset class="ad-form__header">
         <button type="submit" class="ad-form__submit">Отправить заявку</button>
 
         <p class="">* - Обязательные поля</p>
