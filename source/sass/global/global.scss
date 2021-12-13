@@ -1,0 +1,37 @@
+@font-face {
+  font-family: "Oswald";
+  font-weight: 400;
+  font-style: normal;
+  src: local("Oswald"), local("oswaldregular"), url("./source/fonts/oswaldregular.woff2") format("woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Oswald", "Arial", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  overflow: hidden;
+}
+

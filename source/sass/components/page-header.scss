@@ -1,0 +1,11 @@
+@import "./../global/variables.scss";
+
+.page-header {
+  display: flex;
+  height: 65px;
+  padding: 10px 20px;
+
+  .page-header__title {
+    color: $color-dark;
+  }
+}

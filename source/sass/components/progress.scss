@@ -1,0 +1,72 @@
+@import "../global/variables";
+
+.progress {
+  background: $bg-primary;
+  padding: 25px 20px 40px 20px;
+}
+
+.progress__title {
+  font-size: 36px;
+  line-height: 40px;
+  color: $color-black;
+  margin-bottom: 40px;
+}
+
+.progress__description {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-dark;
+  margin-bottom: 20px;
+}
+
+.progress__stats {
+  margin-bottom: 24px;
+}
+
+.progress__list {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.progress__item-details {
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-black;
+  margin-bottom: 8px;
+}
+
+.progress__item-text {
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-dark;
+}
+
+.progress__total {
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-black;
+  margin-bottom: 40px;
+}
+
+.compare {
+  margin-top: 15px;
+  height: 30px;
+
+  .compare__result {
+    font-size: 16px;
+    line-height: 20px;
+    color: $color-black;
+  }
+
+  .compare__result:first-child {
+    margin-right: 13px;
+  }
+
+  .compare__result:last-child {
+    margin-left: 13px;
+  }
+}

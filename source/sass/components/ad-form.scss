@@ -1,0 +1,45 @@
+@import "./source/sass/global/variables.scss";
+
+.ad-form__header {
+  display: flex;
+  flex-direction: column;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+.ad-form__header-title {
+  font-size: 24px;
+  line-height: 26px;
+  color: $color-black;
+  margin-bottom: 35px;
+}
+
+.ad-form__label {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  margin-bottom: 14px;
+}
+
+.ad-form__label input {
+  height: 45px;
+  padding: 0 15px;
+  margin-left: 13px;
+}
+
+.ad-form__submit {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  height: 40px;
+  background: $bg-green;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+  border: 0;
+}

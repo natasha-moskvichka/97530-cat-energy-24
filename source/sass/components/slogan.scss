@@ -1,0 +1,51 @@
+@import "../global/variables";
+
+.slogan {
+  position: relative;
+
+  .slogan__picture {
+    position: absolute;
+    width: 320px;
+    height: 302px;
+    background-color: rgba(104, 183, 56, 0.85);
+    background-image: url("./../../img/index-background-cat.svg");
+    background-blend-mode: overlay, color;
+    background-repeat: no-repeat;
+    background-size: 320px 302px;
+  }
+
+  .slogan__title {
+    font-size: 36px;
+    line-height: 36px;
+    color: $color-white;
+    width: 249px;
+    margin: 27px 0 25px 0;
+  }
+
+  .slogan__intro {
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-white;
+    text-transform: uppercase;
+    margin-bottom: 302px;
+  }
+
+  .slogan__link-select {
+    width: 280px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $bg-green;
+    text-decoration: none;
+    font-size: 14px;
+    line-height: 18px;
+    color: $color-white;
+    margin-bottom: 20px;
+  }
+
+  img {
+    position: absolute;
+    top: 160px;
+  }
+}

@@ -1,0 +1,20 @@
+@import "../global/variables";
+
+.cooperation {
+  padding: 20px 26px;
+  background: $bg-light;
+}
+
+.cooperation__title {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-black;
+}
+
+.cooperation__address {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: $color-dark;
+}
