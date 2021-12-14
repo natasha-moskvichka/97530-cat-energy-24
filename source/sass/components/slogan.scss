@@ -8,10 +8,11 @@
     width: 320px;
     height: 302px;
     background-color: rgba(104, 183, 56, 0.85);
-    background-image: url("./../../img/index-background-cat.svg");
+    background-image: url("../../img/index-background-cat.svg");
     background-blend-mode: overlay, color;
     background-repeat: no-repeat;
     background-size: 320px 302px;
+    z-index: -1;
   }
 
   .slogan__title {
@@ -23,8 +24,8 @@
   }
 
   .slogan__intro {
-    font-size: 20px;
-    line-height: 20px;
+    font-size: 14px;
+    line-height: 14px;
     color: $color-white;
     text-transform: uppercase;
     margin-bottom: 302px;
@@ -42,6 +43,7 @@
     line-height: 18px;
     color: $color-white;
     margin-bottom: 20px;
+    text-transform: uppercase;
   }
 
   img {

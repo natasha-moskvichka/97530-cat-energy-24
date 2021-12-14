@@ -2,7 +2,22 @@
   font-family: "Oswald";
   font-weight: 400;
   font-style: normal;
-  src: local("Oswald"), local("oswaldregular"), url("./source/fonts/oswaldregular.woff2") format("woff2");
+  src: local("Oswald"),
+    local("oswaldregular"),
+    url("http://localhost:3000/source/fonts/oswaldregular.woff2") format("woff2"),
+    url("http://localhost:3000/source/fonts/oswaldregular.woff") format("woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-weight: 500;
+  font-style: normal;
+  src: local("Oswald"),
+    local("oswaldmedium"),
+    url("./source/fonts/oswaldmedium.woff2") format("woff2"),
+    url("./source/fonts/oswaldmedium.woff") format("woff");
+  font-display: swap;
 }
 
 * {
