@@ -1,0 +1,43 @@
+@import "../global/variables";
+
+.program {
+  padding: 0 20px 50px 20px;
+}
+
+.program__title {
+  font-size: 36px;
+  line-height: 40px;
+  color: $color-black;
+  margin-bottom: 40px;
+}
+
+.program__list {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 0;
+}
+
+.program__item {
+  list-style: none;
+  height: 60px;
+}
+
+.program__item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.program__description {
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-dark;
+  margin-left: 80px;
+}
+
+.program__item::before {
+  content: "";
+  width: 60px;
+  height: 60px;
+  background: $bg-green;
+  position: absolute;
+}

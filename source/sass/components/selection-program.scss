@@ -1,0 +1,19 @@
+@import "../global/variables";
+
+.selection-program {
+  margin: 0 20px;
+}
+
+.selection-program__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: $color-black;
+  margin-bottom: 37px;
+}
+
+.selection-program__text {
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-black;
+  margin-bottom: 39px;
+}

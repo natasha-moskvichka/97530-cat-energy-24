@@ -1,1 +1,14 @@
-// Начните писать стили здесь
+@import "../fonts/fonts.scss";
+@import "./global/global.scss";
+@import "components/page-header.scss";
+@import "components/page-main";
+@import "components/slogan";
+@import "components/catalog";
+@import "components/program";
+@import "components/progress";
+@import "components/contacts";
+@import "components/page-footer";
+@import "components/product";
+@import "components/selection-program";
+@import "components/ad-form.scss";
+@import "components/main-nav.scss";

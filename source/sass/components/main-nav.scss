@@ -1,0 +1,31 @@
+@import "../global/variables";
+
+.main-nav {
+  display: flex;
+
+  .main-nav__item {
+    margin-left: 36px;
+    list-style: none;
+    position: relative;
+  }
+
+  .main-nav__item-title {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-black;
+    font-weight: 500;
+  }
+
+  .main-nav__item--active::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: $bg-green;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
