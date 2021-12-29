@@ -1,0 +1,26 @@
+@import "../global/variables.scss";
+@import "../global/viewports.scss";
+
+.header-nav {
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+  top: 65px;
+  left: 0;
+  background: $bg-white;
+  color: $color-black;
+}
+
+@media (min-width: $tablet-width) {
+  .header-nav {
+    position: inherit;
+    width: 480px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .header-nav {
+    color: $color-white;
+  }
+}
+

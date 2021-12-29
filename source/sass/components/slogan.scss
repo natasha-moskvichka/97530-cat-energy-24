@@ -1,53 +1,142 @@
 @import "../global/variables";
+@import "../global/viewports.scss";
 
 .slogan {
   position: relative;
+}
 
-  .slogan__picture {
-    position: absolute;
-    width: 320px;
-    height: 302px;
-    background-color: rgba(104, 183, 56, 0.85);
-    background-image: url("../../img/index-background-cat.svg");
-    background-blend-mode: overlay, color;
-    background-repeat: no-repeat;
-    background-size: 320px 302px;
-    z-index: -1;
-  }
-
-  .slogan__title {
-    font-size: 36px;
-    line-height: 36px;
-    color: $color-white;
-    width: 249px;
-    margin: 27px 0 25px 0;
-  }
-
-  .slogan__intro {
-    font-size: 14px;
-    line-height: 14px;
-    color: $color-white;
-    text-transform: uppercase;
-    margin-bottom: 302px;
-  }
-
-  .slogan__link-select {
-    width: 280px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: $bg-green;
-    text-decoration: none;
-    font-size: 14px;
-    line-height: 18px;
-    color: $color-white;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-  }
-
-  img {
-    position: absolute;
-    top: 160px;
+@media (min-width: $tablet-width) {
+  .slogan {
+    width: 708px;
+    height: 826px;
+    padding-left: 80px;
   }
 }
+
+@media (min-width: $desktop-width) {
+  .slogan {
+    width: 1220px;
+    height: 694px;
+    margin: 0 auto;
+  }
+}
+
+.slogan__picture {
+  position: absolute;
+  width: 100%;
+  height: 302px;
+  background-color: rgba(104, 183, 56, 0.85);
+  background-image: url("../../img/index-background-cat.svg");
+  background-blend-mode: overlay, color;
+  background-repeat: no-repeat;
+  background-size: 320px 302px;
+  z-index: -1;
+}
+
+@media (min-width: $tablet-width) {
+  .slogan__picture {
+    background-color: $bg-white;
+    width: 628px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__picture {
+    width: 720px;
+    height: 694px;
+    background-color: $bg-white;
+    z-index: -1;
+  }
+}
+
+.slogan__title {
+  font-size: 36px;
+  line-height: 36px;
+  color: $color-white;
+  width: 249px;
+  margin: 27px 0 25px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .slogan__title {
+    font-size: 60px;
+    line-height: 60px;
+    color: $color-black;
+    margin-bottom: 40px;
+    width: 414px;
+  }
+}
+
+.slogan__intro {
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 302px;
+}
+
+@media (min-width: $tablet-width) {
+  .slogan__intro {
+    font-size: 20px;
+    line-height: 20px;
+    color: $color-black;
+    margin-bottom: 49px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__intro {
+    margin-bottom: 52px;
+  }
+}
+
+.slogan__link-select {
+  width: 280px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: $bg-green;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 18px;
+  color: $color-white;
+  margin: 0 auto;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .slogan__link-select {
+    width: 244px;
+    height: 54px;
+    font-size: 20px;
+    line-height: 20px;
+    margin: 0;
+  }
+}
+
+.slogan__img {
+  position: absolute;
+  top: 160px;
+  left: 12%;
+}
+
+@media (min-width: $tablet-width) {
+  .slogan__img {
+    width: 709px;
+    height: 609px;
+    top: 216px;
+    z-index: -1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__img {
+    width: 552px;
+    height: 499px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+  }
+}
+

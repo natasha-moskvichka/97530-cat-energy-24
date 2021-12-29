@@ -1,11 +1,42 @@
 @import "./../global/variables.scss";
+@import "../global/viewports.scss";
 
 .page-header {
   display: flex;
+  align-items: center;
   height: 65px;
   padding: 10px 20px;
+  z-index: 1;
 
   .page-header__title {
     color: $color-dark;
   }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header {
+    width: 1220px;
+    margin: 0 auto;
+  }
+}
+
+.page-header__logo {
+  display: flex;
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo {
+    width: 202px;
+    height: 59px;
+  }
+}
+
+.page-header__logo--img {
+  margin-right: 55px;
 }

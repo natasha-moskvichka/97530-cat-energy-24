@@ -1,8 +1,55 @@
 @import "./../global/variables.scss";
+@import "../global/viewports.scss";
 
 .page-footer {
   background-color: $bg-light;
   padding: 39px 20px 22px 20px;
+  position: relative;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer {
+    height: 147px;
+    padding: 58px 0 55px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-footer {
+    height: 149px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 110px;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 236px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__wrapper {
+    height: 147px;
+    flex-direction: row;
+    width: 100%;
+    padding: 0 30px;
+  }
+}
+
+.social__list {
+  display: flex;
+}
+
+.social__item {
+  list-style: none;
 }
 
 .copyright__text {

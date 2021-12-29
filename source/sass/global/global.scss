@@ -1,6 +1,9 @@
+@import "./../global/variables.scss";
+
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,10 +11,12 @@ body {
   font-weight: 400;
   min-height: 100vh;
   margin: 0;
+  color: $color-black;
 }
 
 img {
   max-width: 100%;
+  height: auto;
 }
 
 a {

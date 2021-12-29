@@ -1,4 +1,5 @@
 @import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
 
 .ad-form__header {
   display: flex;
@@ -15,11 +16,25 @@
   margin-bottom: 35px;
 }
 
+@media (min-width: $tablet-width) {
+  .ad-form__header-title {
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
 .ad-form__label {
   font-size: 16px;
   line-height: 18px;
   color: $color-light;
   margin-bottom: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__label {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .ad-form__label input {
