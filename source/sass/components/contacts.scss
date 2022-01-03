@@ -1,8 +1,39 @@
 @import "../global/variables";
+@import "../global/viewports.scss";
+
+.contacts {
+  position: relative;
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    margin-top: 65px;
+  }
+}
 
 .cooperation {
   padding: 20px 26px;
   background: $bg-light;
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 56px 70px;
+    background: $bg-white;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation {
+    position: absolute;
+    width: 565px;
+    height: 198px;
+    top: 154px;
+    left: 110px;
+  }
 }
 
 .cooperation__title {
@@ -12,9 +43,41 @@
   color: $color-black;
 }
 
+@media (min-width: $tablet-width) {
+  .cooperation__title {
+    font-size: 20px;
+    line-height: 26px;
+    width: 170px;
+  }
+}
+
 .cooperation__address {
   font-family: "Arial", sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: $color-dark;
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation__address {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .cooperation__title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .cooperation__title {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+
+.map__img {
+  width: 100%;
 }

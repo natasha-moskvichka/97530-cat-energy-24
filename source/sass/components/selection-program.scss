@@ -1,7 +1,15 @@
 @import "../global/variables";
+@import "../global/viewports.scss";
 
 .selection-program {
-  margin: 0 20px;
+  width: 320px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .selection-program {
+    width: 708px;
+  }
 }
 
 .selection-program__title {
@@ -9,6 +17,13 @@
   line-height: 36px;
   color: $color-black;
   margin-bottom: 37px;
+  font-weight: normal;
+}
+
+@media (min-width: $tablet-width) {
+  .selection-program__title {
+    margin-bottom: 54px;
+  }
 }
 
 .selection-program__text {
@@ -16,4 +31,12 @@
   line-height: 18px;
   color: $color-black;
   margin-bottom: 39px;
+}
+
+@media (min-width: $tablet-width) {
+  .selection-program__text {
+    font-size: 20px;
+    line-height: 30px;
+    margin-bottom: 66px;
+  }
 }

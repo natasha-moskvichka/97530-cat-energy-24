@@ -1,24 +1,74 @@
-@import "../global/variables";
+@import "../global/variables.scss";
+@import "../global/viewports.scss";
 
 .main-nav {
   display: flex;
+  flex-direction: column;
+}
 
-  .main-nav__item {
-    margin-left: 36px;
-    list-style: none;
-    position: relative;
+@media (min-width: $tablet-width) {
+  .main-nav {
+    flex-direction: row;
+    align-items: center;
+    height: 36px;
+    width: auto;
   }
+}
 
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: 720px;
+  }
+}
+
+.main-nav__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  position: relative;
+  height: 66px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav__item {
+    height: 24px;
+    margin-left: 34px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__item:first-child {
+    margin-left: 0;
+  }
+}
+
+.main-nav__item-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $color-black;
+  font-weight: 500;
+}
+
+@media (min-width: $tablet-width) {
   .main-nav__item-title {
-    font-family: "Oswald", sans-serif;
     font-size: 18px;
     line-height: 24px;
-    text-decoration: none;
-    text-transform: uppercase;
-    color: $color-black;
-    font-weight: 500;
+    font-weight: normal;
   }
+}
 
+@media (min-width: $desktop-width) {
+  .main-nav__item-title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $tablet-width) {
   .main-nav__item--active::after {
     content: "";
     width: 100%;
@@ -27,5 +77,11 @@
     position: absolute;
     left: 0;
     bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .main-nav__item--active::after {
+    background: $bg-white;
   }
 }

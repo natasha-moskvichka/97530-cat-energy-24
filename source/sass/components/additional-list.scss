@@ -1,0 +1,139 @@
+@import "../global/variables";
+@import "../global/viewports.scss";
+
+@media (min-width: $tablet-width) {
+  .additional {
+    width: 708px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional {
+    width: 1220px;
+  }
+}
+
+.additional__title {
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-black;
+  margin-bottom: 36px;
+  font-weight: normal;
+}
+
+@media (min-width: $desktop-width) {
+  .additional__title {
+    margin-bottom: 81px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+}
+
+.additional__box {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $tablet-width) {
+  .additional__box {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional__box {
+    height: 288px;
+    margin-bottom: 86px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .additional-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 632px;
+    height: 556px;
+    margin-bottom: 69px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-list {
+    width: 896px;
+  }
+}
+
+.additional-list__promo {
+  width: 245px;
+  background-color: rgba(104, 183, 56, 0.85);
+}
+
+@media (min-width: $tablet-width) {
+  .additional-list__promo {
+    width: 707px;
+    height: 200px;
+    margin-bottom: 76px;
+  }
+}
+
+.additional-list__item-title {
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-dark;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-list__item-title {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .additional-list__item {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-list__item {
+    height: 72px;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.additional-goods {
+  margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-goods {
+    display: flex;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-goods {
+    display: flex;
+  }
+}
+
+.additional-goods__info {
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-light;
+}
+
+.promo__title {
+  font-family: "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+}

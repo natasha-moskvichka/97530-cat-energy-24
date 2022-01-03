@@ -1,8 +1,34 @@
 @import "../global/variables";
+@import "../global/viewports.scss";
 
 .product {
   padding: 0 20px;
   margin-bottom: 32px;
+  width: 320px;
+  height: 190px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .product {
+    padding: 0;
+    width: 324px;
+    height: 430px;
+    background: $bg-light;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product {
+    width: 245px;
+    height: 431px;
+  }
+
+  .product:not(:nth-child(4n + 4)) {
+    margin-right: 80px;
+  }
 }
 
 .product__title {
@@ -10,16 +36,35 @@
   line-height: 20px;
   color: $color-dark;
   text-transform: uppercase;
+  font-weight: normal;
 }
 
-.product__price {
+@media (min-width: $tablet-width) {
+  .product__title {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .product__title {
+    line-height: 21px;
+  }
+}
+
+.product-order {
   font-size: 12px;
   line-height: 16px;
   color: $color-light;
 }
 
-.product__price dl {
-  margin-bottom: 12px;
+@media (min-width: $tablet-width) {
+  .product-order {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 16px;
+    line-height: 16px;
+  }
 }
 
 .product-order__link,
@@ -42,54 +87,20 @@
   line-height: 20px;
 }
 
-.content-more__show {
-  background-color: $bg-light;
-  color: $color-light;
-  font-size: 16px;
-  line-height: 20px;
-  margin-bottom: 25px;
+@media (min-width: $tablet-width) {
+  .additional-list__item-order {
+    width: 100%;
+  }
 }
 
-.content-more__title {
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-darker;
-  margin-bottom: 8px;
+@media (min-width: $tablet-width) {
+  .product-order__link {
+    width: 248px;
+  }
 }
 
-.content-more__slogan {
-  font-size: 12px;
-  line-height: 16px;
-  color: $color-light;
-  margin-bottom: 21px;
-}
-
-.additional-list__title {
-  font-size: 24px;
-  line-height: 24px;
-  color: $color-black;
-  margin-bottom: 36px;
-}
-
-.additional-list__item-title {
-  font-size: 16px;
-  line-height: 16px;
-  color: $color-dark;
-}
-
-.additional-goods {
-  margin-bottom: 15px;
-}
-
-.additional-goods__info {
-  font-size: 14px;
-  line-height: 14px;
-  color: $color-light;
-}
-
-.promo__title {
-  font-family: "Arial", sans-serif;
-  font-size: 16px;
-  line-height: 20px;
-  color: $color-white;
+@media (min-width: $desktop-width) {
+  .product-order__link {
+    width: 168px;
+  }
 }
