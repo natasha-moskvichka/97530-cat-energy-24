@@ -1,10 +1,14 @@
 @import "../global/variables";
 @import "../global/viewports.scss";
 
+.additional {
+  width: 280px;
+  margin: 0 auto;
+}
+
 @media (min-width: $tablet-width) {
   .additional {
     width: 708px;
-    margin: 0 auto;
   }
 }
 
@@ -22,16 +26,23 @@
   font-weight: normal;
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .additional__title {
-    margin-bottom: 81px;
+    margin: 0 0 80px 38px;
     font-size: 36px;
     line-height: 36px;
   }
 }
 
+@media (min-width: $desktop-width) {
+  .additional__title {
+    margin-left: 0;
+  }
+}
+
 .additional__box {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
@@ -50,25 +61,61 @@
 }
 
 @media (min-width: $tablet-width) {
+  .characteristics {
+    margin-bottom: 55px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .characteristics {
+    margin-bottom: 0;
+  }
+}
+
+.additional-list {
+  margin-bottom: 55px;
+}
+
+@media (min-width: $tablet-width) {
   .additional-list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    width: 632px;
     height: 556px;
     margin-bottom: 69px;
+    padding: 26px 38px 28px 38px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additional-list {
     width: 896px;
+    height: 288px;
+    padding: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .characteristics__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .characteristics__list {
+    margin-bottom: 0;
   }
 }
 
 .additional-list__promo {
-  width: 245px;
+  width: 280px;
+  height: 290px;
   background-color: rgba(104, 183, 56, 0.85);
+  display: grid;
+  grid-template-columns: 1fr;
 }
 
 @media (min-width: $tablet-width) {
@@ -76,21 +123,57 @@
     width: 707px;
     height: 200px;
     margin-bottom: 76px;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
 }
 
-.additional-list__item-title {
+@media (min-width: $desktop-width) {
+  .additional-list__promo {
+    width: 245px;
+    height: 288px;
+    grid-template-columns: 1fr;
+  }
+}
+
+.promo__picture {
+  width: 80px;
+  height: 83px;
+  background-image: url("./../../img/icon_gift.svg");
+  background-repeat: no-repeat;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__picture {
+    margin-left: 77px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__picture {
+    margin-left: 33%;
+  }
+}
+
+.characteristics__list-title {
   font-size: 16px;
   line-height: 16px;
   color: $color-dark;
   font-weight: normal;
   text-transform: uppercase;
+  margin-bottom: 13px;
 }
 
 @media (min-width: $tablet-width) {
-  .additional-list__item-title {
+  .characteristics__list-title {
     font-size: 20px;
     line-height: 20px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .characteristics__list-title {
+    width: 160px;
   }
 }
 
@@ -98,30 +181,36 @@
   .additional-list__item {
     display: flex;
     flex-direction: column;
+    width: 632px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additional-list__item {
+    width: inherit;
     height: 72px;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
 }
 
 .additional-goods {
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 15px;
 }
 
 @media (min-width: $tablet-width) {
   .additional-goods {
-    display: flex;
+    margin-bottom: 0;
   }
 }
 
 @media (min-width: $desktop-width) {
   .additional-goods {
-    display: flex;
+    width: 490px;
+    justify-content: space-evenly;
   }
 }
 
@@ -129,6 +218,13 @@
   font-size: 14px;
   line-height: 14px;
   color: $color-light;
+  font-family: "Arial", sans-serif;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-goods__info:last-child {
+    margin-left: 55px;
+  }
 }
 
 .promo__title {
@@ -136,4 +232,18 @@
   font-size: 16px;
   line-height: 20px;
   color: $color-white;
+  width: 160px;
+}
+
+@media (min-width: $tablet-width) {
+  .promo__title {
+    margin-left: 77px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo__title {
+    margin-left: 0;
+    text-align: center;
+  }
 }

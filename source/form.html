@@ -9,7 +9,8 @@
 
 <header class="page-header">
   <a href="index.html" class="page-header__logo">
-    <img src="img/logo-header.svg" width="202" height="60" alt="Кэт Энерджи">
+    <img src="img/logo-header-img.svg" width="34" height="38" alt="Кэт Энерджи" class="page-header__logo--img">
+    <img src="img/logo-header-text.svg" width="101" height="18" alt="Кэт Энерджи" class="page-header__logo--text">
   </a>
 
   <h2 class="visually-hidden page-header__title">Cat Energy</h2>
@@ -39,67 +40,76 @@
     <p class="selection-program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form method="post" action="https://echo.htmlacademy.ru" class="ad-form" name="main-form" autocomplete="off">
 
-      <fieldset class="ad-form__header">
-        <label class="ad-form__label"> Имя:*
-          <input type="text" name="name" placeholder="Барсик" required>
-        </label>
-        <label class="ad-form__label"> Вес (кг):*
-          <input type="text" name="weight" placeholder="7" required>
-        </label>
-        <label class="ad-form__label"> Возраст (лет):
-          <input type="text" name="age" placeholder="7" required>
-        </label>
-      </fieldset>
+      <div class="ad-form__wrapper data-module">
+        <fieldset class="ad-form__header data-module__item">
+          <label class="ad-form__label"> Имя:*
+            <input type="text" name="name" placeholder="Барсик" required>
+          </label>
+          <label class="ad-form__label"> Вес (кг):*
+            <input type="text" name="weight" placeholder="7" required>
+          </label>
+          <label class="ad-form__label"> Возраст (лет):
+            <input type="text" name="age" placeholder="7" required>
+          </label>
+        </fieldset>
 
-      <fieldset class="ad-form__header">
-        <input type="radio" name="lose-weight" id="lose-weight">
-        <label class="ad-form__label" for="lose-weight">Похудение</label>
+        <fieldset class="ad-form__header data-module__item">
+          <input type="radio" name="lose-weight" id="lose-weight">
+          <label class="ad-form__label" for="lose-weight">Похудение</label>
 
-        <input type="radio" name="add-weight" id="add-weight">
-        <label class="ad-form__label" for="add-weight">Похудение</label>
+          <input type="radio" name="add-weight" id="add-weight">
+          <label class="ad-form__label" for="add-weight">Набор массы</label>
 
-        <input type="radio" name="unknown" id="unknown">
-        <label class="ad-form__label" for="unknown">Не знаю (нужен ваш совет)</label>
-      </fieldset>
+          <input type="radio" name="unknown" id="unknown">
+          <label class="ad-form__label" for="unknown">Не знаю (нужен ваш совет)</label>
+        </fieldset>
+      </div>
 
-      <fieldset class="ad-form__header">
-        <legend class="ad-form__header-title">Контактные данные</legend>
-        <label class="ad-form__label"> E-mail:*
-          <input type="text" name="name" placeholder="kuklachev@gmail.com" required>
-        </label>
-        <label class="ad-form__label"> Телефон:*
-          <input type="text" name="name" placeholder="8(960)900-60-90" required>
-        </label>
-      </fieldset>
+      <div class="ad-form__wrapper">
+        <fieldset class="ad-form__header contacts-module">
+          <legend class="ad-form__header-title">Контактные данные (владельца кота)</legend>
+          <label class="ad-form__label ad-form__label--contact">E-mail:*
+            <input type="text" name="name" placeholder="kuklachev@gmail.com" required>
+          </label>
+          <label class="ad-form__label ad-form__label--contact">Телефон:*
+            <input type="text" name="name" placeholder="8(960)900-60-90" required>
+          </label>
+        </fieldset>
 
-      <fieldset class="ad-form__header">
-        <legend class="ad-form__header-title">Комментарий</legend>
-        <label class="ad-form__label">
-          <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
-        </label>
-      </fieldset>
+        <fieldset class="ad-form__header textarea-module">
+          <legend class="ad-form__header-title">Комментарий</legend>
+          <label class="ad-form__label">
+            <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
+          </label>
+        </fieldset>
+      </div>
 
-      <fieldset class="ad-form__header">
-        <legend class="ad-form__header-title">Дополнительно</legend>
+      <div class="ad-form__wrapper">
+        <fieldset class="ad-form__header add-module">
+          <legend class="ad-form__header-title">Дополнительно</legend>
 
-        <input type="checkbox" name="no-sugar" id="no-sugar">
-        <label class="ad-form__label" for="no-sugar">Сахарозаменитель</label>
+          <div class="add-module__inner">
+          <input type="checkbox" name="no-sugar" id="no-sugar">
+          <label class="ad-form__label" for="no-sugar">Сахарозаменитель</label>
 
-        <input type="checkbox" name="water" id="water">
-        <label class="ad-form__label" for="water">Питьевая вода</label>
+          <input type="checkbox" name="water" id="water">
+          <label class="ad-form__label" for="water">Питьевая вода</label>
+          </div>
+          <div class="add-module__inner">
+          <input type="checkbox" name="milk" id="milk">
+          <label class="ad-form__label" for="milk">Молоко</label>
 
-        <input type="checkbox" name="milk" id="milk">
-        <label class="ad-form__label" for="milk">Молоко</label>
+          <input type="checkbox" name="vitamins" id="vitamins">
+          <label class="ad-form__label" for="vitamins">Витамины</label>
+          </div>
+        </fieldset>
 
-        <input type="checkbox" name="vitamins" id="vitamins">
-        <label class="ad-form__label" for="vitamins">Витамины</label>
-      </fieldset>
+        <fieldset class="ad-form__header submit-area">
+          <button type="submit" class="ad-form__submit">Отправить заявку</button>
 
-      <fieldset class="ad-form__header">
-        <button type="submit" class="ad-form__submit">Отправить заявку</button>
-
-        <p class="">* - Обязательные поля</p>
-      </fieldset>
+          <p class="ad-form__header--required">* - Обязательные поля</p>
+        </fieldset>
+      </div>
     </form>
   </section>
 
@@ -112,7 +122,7 @@
         Санкт-Петербург</p>
     </div>
     <div class="map">
-      <img src="img/map.svg" width="320" height="362" alt="Карта">
+      <img src="img/map.svg" width="320" height="362" alt="Карта" class="map__img">
     </div>
   </section>
 </main>
@@ -124,13 +134,19 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a href="https://vk.com/htmlacademy" class="social__link social__link--vkontakte">Мы в Вконтакте</a>
+          <a href="https://vk.com/htmlacademy" class="social__link social__link--vkontakte">
+            <img src="img/vk.svg" width="29" height="18" alt="Вконтакте">
+          </a>
         </li>
         <li class="social__item">
-          <a href="https://instagram.com/htmlacademy" class="social__link social__link--instagram">Мы в Инстраграме</a>
+          <a href="https://instagram.com/htmlacademy" class="social__link social__link--instagram">
+            <img src="img/instagram.svg" width="23" height="23" alt="Инстаграм">
+          </a>
         </li>
         <li class="social__item">
-          <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook">Мы в Фейсбуке</a>
+          <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook">
+            <img src="img/facebook.svg" width="15" height="29" alt="Фейсбук">
+          </a>
         </li>
       </ul>
     </div>
