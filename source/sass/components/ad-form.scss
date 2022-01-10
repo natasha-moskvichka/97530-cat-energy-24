@@ -74,7 +74,21 @@
 
 .add-module__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: $tablet-width) {
+  .add-module__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ad-form__header--required {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-black;
+  text-align: center;
 }
 
 .ad-form__label {
@@ -188,7 +202,7 @@
   }
 }
 
-@media (min-width: $tablet-width) {
+@media (min-width: $desktop-width) {
   .ad-form__submit {
     width: 568px;
   }
