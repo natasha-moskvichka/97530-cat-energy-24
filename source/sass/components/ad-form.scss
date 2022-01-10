@@ -1,12 +1,46 @@
 @import "./source/sass/global/variables.scss";
 @import "../global/viewports.scss";
 
+.ad-form__wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 .ad-form__header {
   display: flex;
   flex-direction: column;
-  border-top: 0;
-  border-left: 0;
-  border-right: 0;
+  border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__header {
+    width: 630px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .data-module {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .data-module__item {
+    width: 570px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-module {
+    width: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.ad-form__header input[type="radio"],
+.ad-form__header input[type="checkbox"] {
+  display: none;
 }
 
 .ad-form__header-title {
@@ -14,13 +48,47 @@
   line-height: 26px;
   color: $color-black;
   margin-bottom: 35px;
+  width: 182px;
 }
 
 @media (min-width: $tablet-width) {
   .ad-form__header-title {
     font-size: 36px;
     line-height: 36px;
+    width: 100%;
   }
+}
+
+@media (min-width: $desktop-width) {
+  .textarea-module {
+    width: 100%;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .add-module {
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+.add-module__inner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: $tablet-width) {
+  .add-module__inner {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ad-form__header--required {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: $color-black;
+  text-align: center;
 }
 
 .ad-form__label {
@@ -28,6 +96,9 @@
   line-height: 18px;
   color: $color-light;
   margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {
@@ -37,10 +108,73 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .ad-form__label--contact {
+    width: 570px;
+  }
+}
+
+.ad-form__label input::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  text-transform: uppercase;
+}
+
+.ad-form__label textarea {
+  width: 280px;
+  height: 150px;
+  padding: 10px 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__label textarea {
+    width: 630px;
+    height: 175px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .ad-form__label textarea {
+    width: 1220px;
+  }
+}
+
+.ad-form__label textarea::placeholder {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  text-transform: uppercase;
+}
+
 .ad-form__label input {
   height: 45px;
   padding: 0 15px;
   margin-left: 13px;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__label input {
+    width: 100%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .submit-area {
+    flex-direction: row;
+    align-items: center;
+    height: 52px;
+    margin-bottom: 72px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .submit-area {
+    width: 1220px;
+    margin-top: 60px;
+  }
 }
 
 .ad-form__submit {
@@ -57,4 +191,19 @@
   text-transform: uppercase;
   margin-bottom: 21px;
   border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__submit {
+    height: 52px;
+    font-size: 20px;
+    line-height: 0;
+    margin: 0 60px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .ad-form__submit {
+    width: 568px;
+  }
 }

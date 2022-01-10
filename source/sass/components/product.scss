@@ -3,19 +3,17 @@
 
 .product {
   padding: 0 20px;
-  margin-bottom: 32px;
   width: 320px;
-  height: 190px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
 }
 
 @media (min-width: $tablet-width) {
   .product {
     padding: 0;
     width: 324px;
-    height: 430px;
     background: $bg-light;
   }
 }
@@ -23,12 +21,24 @@
 @media (min-width: $desktop-width) {
   .product {
     width: 245px;
-    height: 431px;
   }
+}
 
-  .product:not(:nth-child(4n + 4)) {
-    margin-right: 80px;
+.product__item {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+@media (min-width: $tablet-width) {
+  .product__item {
+    flex-direction: column;
+    align-items: center;
   }
+}
+
+.product__item--img {
+  margin: 0 28px 0;
 }
 
 .product__title {
@@ -37,18 +47,24 @@
   color: $color-dark;
   text-transform: uppercase;
   font-weight: normal;
+  width: 76px;
+  margin-bottom: 18px;
 }
 
 @media (min-width: $tablet-width) {
   .product__title {
     font-size: 20px;
     line-height: 24px;
+    margin: 34px 0 21px 0;
+    width: 130px;
+    text-align: center;
   }
 }
 
 @media (min-width: $desktop-width) {
   .product__title {
     line-height: 21px;
+    margin-top: 46px;
   }
 }
 
@@ -56,6 +72,9 @@
   font-size: 12px;
   line-height: 16px;
   color: $color-light;
+  width: 138px;
+  display: flex;
+  justify-content: space-between;
 }
 
 @media (min-width: $tablet-width) {
@@ -64,6 +83,13 @@
     grid-template-columns: 1fr 1fr;
     font-size: 16px;
     line-height: 16px;
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-order dd {
+    text-align: right;
   }
 }
 
@@ -79,6 +105,10 @@
   text-decoration: none;
 }
 
+.additional-list__item-order {
+  margin-bottom: 32px;
+}
+
 .product-order__link,
 .additional-list__item-order {
   background-color: $bg-green;
@@ -87,15 +117,32 @@
   line-height: 20px;
 }
 
-@media (min-width: $tablet-width) {
-  .additional-list__item-order {
-    width: 100%;
-  }
+.product-order__link {
+  margin-bottom: 14px;
 }
 
 @media (min-width: $tablet-width) {
   .product-order__link {
-    width: 248px;
+    margin: 33px 0 40px 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .additional-list__item-order {
+    width: 632px;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .additional-list__item-order {
+    width: 632px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-list__item-order {
+    width: 244px;
   }
 }
 

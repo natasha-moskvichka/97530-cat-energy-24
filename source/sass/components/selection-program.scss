@@ -2,13 +2,20 @@
 @import "../global/viewports.scss";
 
 .selection-program {
-  width: 320px;
+  width: 280px;
   margin: 0 auto;
+  padding-bottom: 32px;
 }
 
 @media (min-width: $tablet-width) {
   .selection-program {
     width: 708px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .selection-program {
+    width: 1220px;
   }
 }
 
@@ -22,6 +29,8 @@
 
 @media (min-width: $tablet-width) {
   .selection-program__title {
+    font-size: 60px;
+    line-height: 60px;
     margin-bottom: 54px;
   }
 }
@@ -31,6 +40,8 @@
   line-height: 18px;
   color: $color-black;
   margin-bottom: 39px;
+  text-transform: uppercase;
+  width: 230px;
 }
 
 @media (min-width: $tablet-width) {
@@ -38,5 +49,6 @@
     font-size: 20px;
     line-height: 30px;
     margin-bottom: 66px;
+    width: 323px;
   }
 }

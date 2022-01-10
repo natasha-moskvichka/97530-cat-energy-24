@@ -14,15 +14,14 @@
 .cooperation {
   padding: 20px 26px;
   background: $bg-light;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 @media (min-width: $tablet-width) {
   .cooperation {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 56px 70px;
-    background: $bg-white;
+    background: $bg-light;
   }
 }
 
@@ -58,9 +57,10 @@
   color: $color-dark;
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $tablet-width) {
   .cooperation__address {
     font-size: 16px;
+    text-align: right;
   }
 }
 

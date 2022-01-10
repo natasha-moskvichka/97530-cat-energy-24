@@ -3,14 +3,19 @@
 
 .content-more {
   display: flex;
+  flex-direction: column;
+  width: 280px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
   .content-more {
     width: 324px;
     height: 431px;
-    flex-direction: column;
     align-items: center;
+    padding: 0 38px 40px 38px;
+    border: 2px solid $bg-light;
   }
 }
 
@@ -32,6 +37,7 @@
 @media (min-width: $tablet-width) {
   .content-more__show {
     width: 248px;
+    margin-bottom: 0;
   }
 }
 
@@ -53,6 +59,8 @@
   .content-more__title {
     font-size: 20px;
     line-height: 22px;
+    margin: 160px 0 0 0;
+    width: 130px;
   }
 }
 
@@ -61,4 +69,13 @@
   line-height: 16px;
   color: $color-light;
   margin-bottom: 21px;
+}
+
+@media (min-width: $tablet-width) {
+  .content-more__slogan {
+    font-size: 16px;
+    line-height: 18px;
+    margin: 23px 0 84px 0;
+    width: 160px;
+  }
 }

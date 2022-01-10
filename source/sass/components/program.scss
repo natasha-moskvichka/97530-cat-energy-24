@@ -52,25 +52,20 @@
 }
 
 .program__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
   position: relative;
   padding: 0;
 }
 
 @media (min-width: $tablet-width) {
   .program__list {
-    display: grid;
     grid-template-columns: 2fr 2fr;
   }
 }
 
 @media (min-width: $desktop-width) {
   .program__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
   }
 }
 
