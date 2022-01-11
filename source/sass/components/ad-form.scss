@@ -105,6 +105,7 @@
   display: flex;
   height: 45px;
   align-items: center;
+  margin-bottom: 13px;
 }
 
 @media (min-width: $tablet-width) {
@@ -119,10 +120,6 @@
 
 .data-private__list:first-child {
   margin-top: 22px;
-}
-
-.data-private__list {
-  margin-bottom: 13px;
 }
 
 .data-private__list:last-child {

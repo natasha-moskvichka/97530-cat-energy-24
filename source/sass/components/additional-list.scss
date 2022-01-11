@@ -113,7 +113,7 @@
     height: 556px;
     margin-bottom: 69px;
     padding: 0 38px 28px 38px;
-    border: 1px solid #CDCDCD;
+    border: 1px solid #cdcdcd;
   }
 }
 
@@ -209,7 +209,7 @@
 }
 
 .additional-list__item:first-child {
-  border-top: 1px solid #CDCDCD;
+  border-top: 1px solid #cdcdcd;
 }
 
 @media (min-width: $tablet-width) {
@@ -219,7 +219,7 @@
 }
 
 .additional-list__item {
-  border-bottom: 1px solid #CDCDCD;
+  border-bottom: 1px solid #cdcdcd;
 }
 
 @media (min-width: $tablet-width) {
@@ -234,7 +234,7 @@
     content: "";
     width: 708px;
     height: 1px;
-    background: #CDCDCD;
+    background: #cdcdcd;
     position: absolute;
     left: -38px;
   }
@@ -298,7 +298,7 @@
 
 @media (min-width: $tablet-width) {
   .promo__title {
-   text-align: left;
+    text-align: left;
   }
 }
 
