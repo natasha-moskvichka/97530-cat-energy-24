@@ -64,7 +64,7 @@
   .progress__title {
     font-size: 60px;
     line-height: 60px;
-    margin-bottom: 63px;
+    margin: 43px 0 63px 0;
   }
 }
 
@@ -137,6 +137,7 @@
 @media (min-width: $tablet-width) {
   .progress__list {
     justify-content: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -146,13 +147,25 @@
   }
 }
 
+.progress__item {
+  height: 56px;
+  border: 1px solid #cdcdcd;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: $tablet-width) {
   .progress__item {
     display: flex;
     flex-direction: column;
     justify-content: center;
     width: 162px;
-    height: 77px;
+  }
+
+  .progress__item:first-child {
+    margin-right: 42px;
   }
 }
 
@@ -160,7 +173,12 @@
   font-size: 24px;
   line-height: 24px;
   color: $color-black;
-  margin-bottom: 8px;
+  width: 124px;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+  padding-bottom: 8px;
+  text-transform: uppercase;
 }
 
 @media (min-width: $desktop-width) {
@@ -170,10 +188,27 @@
   }
 }
 
-.progress__item-text {
+.progress__item--text {
   font-size: 12px;
   line-height: 12px;
   color: $color-dark;
+  text-align: center;
+  width: 65px;
+  font-family: "Arial", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  background: $bg-primary;
+}
+
+@media (min-width: $tablet-width) {
+  .progress__item--text {
+    background: $bg-white;
+    font-size: 14px;
+    line-height: 14px;
+    min-width: 97px;
+    width: 145px;
+    padding: 0 9px;
+  }
 }
 
 .progress__total {
@@ -190,6 +225,8 @@
     line-height: 20px;
     margin-bottom: 0;
     text-align: right;
+    height: 70px;
+    padding-top: 15px;
   }
 }
 
@@ -211,11 +248,23 @@
   height: 30px;
 }
 
+@media (min-width: $tablet-width) {
+  .compare {
+    margin-bottom: 60px;
+  }
+}
+
 .compare__result {
   font-size: 16px;
   line-height: 20px;
   color: $color-black;
   text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .compare__result {
+    border-bottom: 1px dotted #2b2b2b;
+  }
 }
 
 .compare__result--input {

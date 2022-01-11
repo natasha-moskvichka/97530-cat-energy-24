@@ -10,12 +10,77 @@
   display: flex;
   flex-direction: column;
   border: 0;
+  position: relative;
+}
+
+.contacts-module::after,
+.ad-form__header:not(:first-child)::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: #d9d9d9;
+  left: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__header:not(:first-child)::after {
+    content: none;
+  }
+}
+
+.contacts-module::after {
+  bottom: 195px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-module::after {
+    content: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .ad-form__header {
     width: 630px;
   }
+}
+
+.data-cat {
+  margin-bottom: 24px;
+}
+
+.data-cat__list {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: $desktop-width) {
+  .data-cat__list {
+    margin-bottom: 20px;
+  }
+}
+
+.private-information__input {
+  width: 100%;
+  height: inherit;
+  padding: 0 50px 0 15px;
+  margin-left: 27px;
+  border: 1px solid #e7e7e7;
+  position: relative;
+}
+
+@media (min-width: $desktop-width) {
+  .private-information__input {
+    height: 52px;
+    width: 486px;
+  }
+}
+
+.private-information--icon {
+  position: absolute;
+  right: 15px;
 }
 
 @media (min-width: $desktop-width) {
@@ -25,9 +90,43 @@
     justify-content: space-between;
   }
 
-  .data-module__item {
+  .data-module__list {
     width: 570px;
   }
+}
+
+@media (min-width: $tablet-width) {
+  .data-private {
+    border: 1px solid #e7e7e7;
+  }
+}
+
+.data-private__list {
+  display: flex;
+  height: 45px;
+  align-items: center;
+}
+
+@media (min-width: $tablet-width) {
+  .data-private__list {
+    padding-left: 27px;
+  }
+}
+
+.data-private__list .ad-form__label {
+  margin-left: 15px;
+}
+
+.data-private__list:first-child {
+  margin-top: 22px;
+}
+
+.data-private__list {
+  margin-bottom: 13px;
+}
+
+.data-private__list:last-child {
+  margin-bottom: 20px;
 }
 
 @media (min-width: $desktop-width) {
@@ -49,6 +148,18 @@
   color: $color-black;
   margin-bottom: 35px;
   width: 182px;
+  position: relative;
+  padding-top: 25px;
+}
+
+.ad-form__header-title::before {
+  content: "";
+  width: 100px;
+  height: 2px;
+  position: absolute;
+  background: $bg-green;
+  right: -110px;
+  top: 40px;
 }
 
 @media (min-width: $tablet-width) {
@@ -56,6 +167,22 @@
     font-size: 36px;
     line-height: 36px;
     width: 100%;
+    padding-top: 75px;
+  }
+
+  .ad-form__header-title::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    background: $bg-green;
+    left: -40px;
+    top: 92px;
+  }
+
+  .ad-form__header-title::before {
+    right: -20px;
+    top: 94px;
   }
 }
 
@@ -83,6 +210,44 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .add-module__inner {
+    grid-auto-flow: column;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    width: 100%;
+  }
+}
+
+.add-module__inner--item {
+  display: flex;
+  margin-bottom: 13px;
+}
+
+@media (min-width: $desktop-width) {
+  .add-module__inner--item {
+    margin-bottom: 0;
+  }
+}
+
+.add-module__inner--item:last-child {
+  margin-bottom: 34px;
+}
+
+@media (min-width: $desktop-width) {
+  .add-module__inner--item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.add-module__inner--icon {
+  position: absolute;
+}
+
+.add-product--label {
+  margin-left: 16px;
+}
+
 .ad-form__header--required {
   font-family: "Arial", sans-serif;
   font-size: 14px;
@@ -95,10 +260,10 @@
   font-size: 16px;
   line-height: 18px;
   color: $color-light;
-  margin-bottom: 14px;
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 @media (min-width: $tablet-width) {
@@ -108,13 +273,11 @@
   }
 }
 
-@media (min-width: $desktop-width) {
-  .ad-form__label--contact {
-    width: 570px;
-  }
+.private-information {
+  height: 45px;
 }
 
-.ad-form__label input::placeholder {
+.private-information__input::placeholder {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   line-height: 18px;
@@ -125,7 +288,7 @@
 .ad-form__label textarea {
   width: 280px;
   height: 150px;
-  padding: 10px 15px;
+  padding: 10px 13px;
 }
 
 @media (min-width: $tablet-width) {
@@ -147,18 +310,6 @@
   line-height: 18px;
   color: $color-light;
   text-transform: uppercase;
-}
-
-.ad-form__label input {
-  height: 45px;
-  padding: 0 15px;
-  margin-left: 13px;
-}
-
-@media (min-width: $tablet-width) {
-  .ad-form__label input {
-    width: 100%;
-  }
 }
 
 @media (min-width: $tablet-width) {

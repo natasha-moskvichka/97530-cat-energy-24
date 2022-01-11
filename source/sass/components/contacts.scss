@@ -13,7 +13,7 @@
 
 .cooperation {
   padding: 20px 26px;
-  background: $bg-light;
+  background: $bg-white;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -21,8 +21,12 @@
 @media (min-width: $tablet-width) {
   .cooperation {
     padding: 56px 70px;
-    background: $bg-light;
   }
+}
+
+.cooperation-catalog {
+  background: $bg-light;
+  margin-top: 35px;
 }
 
 @media (min-width: $desktop-width) {
@@ -30,7 +34,7 @@
     position: absolute;
     width: 565px;
     height: 198px;
-    top: 154px;
+    top: 25%;
     left: 110px;
   }
 }
@@ -40,6 +44,7 @@
   line-height: 20px;
   text-transform: uppercase;
   color: $color-black;
+  width: 140px;
 }
 
 @media (min-width: $tablet-width) {
@@ -78,6 +83,7 @@
   }
 }
 
-.map__img {
-  width: 100%;
+.map iframe {
+  border: none;
+  display: block;
 }

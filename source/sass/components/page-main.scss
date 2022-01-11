@@ -5,10 +5,13 @@
   font-size: 36px;
   line-height: 36px;
   color: $color-black;
-  padding-bottom: 49px;
   font-weight: normal;
   width: 280px;
   margin: 0 auto;
+  align-items: center;
+  display: flex;
+  padding: 27px 0 40px 0;
+  position: relative;
 }
 
 @media (min-width: $tablet-width) {
@@ -33,3 +36,4 @@
     margin: 65px 0 0 0;
   }
 }
+
