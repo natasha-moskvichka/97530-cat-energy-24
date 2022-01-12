@@ -8,7 +8,6 @@
   padding: 10px 20px;
   z-index: 1;
   border: 1px solid #d9d9d9;
-  margin-bottom: 27px;
 
   .page-header__title {
     color: $color-dark;
@@ -27,6 +26,7 @@
   .page-header {
     width: 1220px;
     margin: 0 auto;
+    padding-top: 70px;
   }
 }
 

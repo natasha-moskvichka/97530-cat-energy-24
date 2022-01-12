@@ -69,6 +69,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .additional__title::after {
+    width: 835px;
+  }
+}
+
 .additional__box {
   display: flex;
   flex-direction: column;
@@ -143,7 +149,7 @@
 .additional-list__promo {
   width: 280px;
   height: 290px;
-  background: rgba(104, 183, 56, 0.85) url("./../../img/promo.svg") no-repeat;
+  background: rgba(104, 183, 56, 0.85) url("../img/promo.svg") no-repeat;
   background-blend-mode: overlay, color;
   display: grid;
   justify-content: center;
@@ -169,7 +175,7 @@
 
 .promo__picture {
   height: 80px;
-  background: url("./../../img/icon_gift.svg") no-repeat 50%;
+  background: url("../img/icon_gift.svg") no-repeat 50%;
 }
 
 @media (min-width: $tablet-width) {
@@ -215,6 +221,12 @@
 @media (min-width: $tablet-width) {
   .additional-list__item:first-child {
     border-top: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-list__item:first-child {
+    border-top: 1px solid #cdcdcd;
   }
 }
 
@@ -286,6 +298,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .additional-goods__info {
+    width: 140px;
+  }
+}
+
 .promo__title {
   font-family: "Arial", sans-serif;
   font-size: 16px;
@@ -304,6 +322,7 @@
 
 @media (min-width: $desktop-width) {
   .promo__title {
-    margin-left: 0;
+    margin-left: 16%;
+    text-align: center;
   }
 }

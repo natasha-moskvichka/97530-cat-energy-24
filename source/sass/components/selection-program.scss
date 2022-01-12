@@ -4,12 +4,13 @@
 .selection-program {
   width: 280px;
   margin: 0 auto;
-  padding-bottom: 32px;
+  padding: 27px 0 32px 0;
 }
 
 @media (min-width: $tablet-width) {
   .selection-program {
     width: 708px;
+    padding-top: 0;
   }
 }
 

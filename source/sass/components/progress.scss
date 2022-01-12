@@ -263,17 +263,42 @@
 
 @media (min-width: $tablet-width) {
   .compare__result {
-    border-bottom: 1px dotted #2b2b2b;
+    border-bottom: 1px dotted #dcdcdc;
   }
 }
 
+.compare__label {
+  display: flex;
+  align-items: center;
+}
+
 .compare__result--input {
-  width: 86px;
+  appearance: none;
 }
 
 @media (min-width: $tablet-width) {
   .compare__result--input {
+    overflow: hidden;
     width: 426px;
+    height: 34px;
+    background-color: transparent;
+  }
+
+  .compare__result--input::-webkit-slider-runnable-track {
+    height: 6px;
+    background: #dcdcdc;
+    border-radius: 6px;
+  }
+
+  .compare__result--input::-webkit-slider-thumb {
+    width: 34px;
+    height: 34px;
+    cursor: ew-resize;
+    border-radius: 50%;
+    margin-top: -14px;
+    border: 1px solid #cdcdcd;
+    background: $bg-white url("../img/slider-control.svg") no-repeat center;
+    appearance: none;
   }
 }
 

@@ -5,12 +5,6 @@
   position: relative;
 }
 
-@media (min-width: $desktop-width) {
-  .contacts {
-    margin-top: 65px;
-  }
-}
-
 .cooperation {
   padding: 20px 26px;
   background: $bg-white;
@@ -42,6 +36,7 @@
 .cooperation__title {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: $color-black;
   width: 140px;
