@@ -15,9 +15,10 @@
 
 @media (min-width: $desktop-width) {
   .slogan {
-    width: 1220px;
-    height: 694px;
+    width: 1440px;
+    height: 570px;
     margin: 0 auto;
+    padding-left: 0;
   }
 }
 
@@ -25,18 +26,27 @@
   position: absolute;
   width: 100%;
   height: 302px;
-  background-color: rgba(104, 183, 56, 0.85);
-  background-image: url("./../../img/bg-header-food.svg");
-  background-blend-mode: overlay, color;
+  background-image: url("../img/index-background-cat.svg");
   background-repeat: no-repeat;
   background-size: 320px 302px;
   z-index: -1;
 }
 
+.slogan__picture::before {
+  content: "";
+  background-color: rgba(104, 183, 56, 0.85);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 @media (min-width: $tablet-width) {
   .slogan__picture {
-    background-color: $bg-white;
     width: 628px;
+  }
+
+  .slogan__picture::before {
+    background: $bg-white;
   }
 }
 
@@ -44,8 +54,20 @@
   .slogan__picture {
     width: 720px;
     height: 694px;
-    background-color: $bg-white;
+    position: absolute;
+    right: 0;
+    top: -190px;
+    background-color: $bg-green;
     z-index: -1;
+    background-position: right;
+  }
+
+  .slogan__picture::before {
+    content: "";
+    background-color: rgba(104, 183, 56, 0.85);
+    width: 100%;
+    height: 100%;
+    position: absolute;
   }
 }
 
@@ -53,8 +75,8 @@
   font-size: 36px;
   line-height: 36px;
   color: $color-white;
-  width: 249px;
-  margin: 27px 0 25px 0;
+  text-align: center;
+  padding: 27px 0 25px 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -64,6 +86,16 @@
     color: $color-black;
     margin-bottom: 40px;
     width: 414px;
+    text-align: left;
+    padding: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__title {
+    margin-top: 110px;
+    width: 620px;
+    padding-left: 190px;
   }
 }
 
@@ -72,7 +104,8 @@
   line-height: 14px;
   color: $color-white;
   text-transform: uppercase;
-  margin-bottom: 302px;
+  margin-bottom: 295px;
+  text-align: center;
 }
 
 @media (min-width: $tablet-width) {
@@ -80,13 +113,15 @@
     font-size: 20px;
     line-height: 20px;
     color: $color-black;
-    margin-bottom: 49px;
+    margin-bottom: 50px;
+    text-align: left;
   }
 }
 
 @media (min-width: $desktop-width) {
   .slogan__intro {
     margin-bottom: 52px;
+    padding-left: 190px;
   }
 }
 
@@ -103,6 +138,15 @@
   color: $color-white;
   margin: 0 auto;
   text-transform: uppercase;
+
+  &:hover {
+    background: $bg-green--hover;
+  }
+
+  &:active {
+    background: $bg-green--hover;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -111,14 +155,20 @@
     height: 54px;
     font-size: 20px;
     line-height: 20px;
-    margin: 0;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__link-select {
+    margin-left: 190px;
   }
 }
 
 .slogan__img {
   position: absolute;
   top: 160px;
-  left: 12%;
+  left: 6%;
 }
 
 @media (min-width: $tablet-width) {
@@ -135,7 +185,7 @@
     width: 552px;
     height: 499px;
     position: absolute;
-    top: 0;
-    left: 50%;
+    top: -64px;
+    left: 40%;
   }
 }

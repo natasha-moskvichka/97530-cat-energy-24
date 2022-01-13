@@ -5,15 +5,9 @@
   position: relative;
 }
 
-@media (min-width: $desktop-width) {
-  .contacts {
-    margin-top: 65px;
-  }
-}
-
 .cooperation {
   padding: 20px 26px;
-  background: $bg-light;
+  background: $bg-white;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
@@ -21,8 +15,13 @@
 @media (min-width: $tablet-width) {
   .cooperation {
     padding: 56px 70px;
-    background: $bg-light;
   }
+}
+
+.cooperation-catalog,
+.cooperation-form {
+  background: $bg-light;
+  margin-top: 35px;
 }
 
 @media (min-width: $desktop-width) {
@@ -30,16 +29,19 @@
     position: absolute;
     width: 565px;
     height: 198px;
-    top: 154px;
+    top: 25%;
     left: 110px;
+    background: $bg-white;
   }
 }
 
 .cooperation__title {
   font-size: 16px;
   line-height: 20px;
+  font-weight: 400;
   text-transform: uppercase;
   color: $color-black;
+  width: 140px;
 }
 
 @media (min-width: $tablet-width) {
@@ -78,6 +80,8 @@
   }
 }
 
-.map__img {
+.map iframe {
+  border: none;
+  display: block;
   width: 100%;
 }

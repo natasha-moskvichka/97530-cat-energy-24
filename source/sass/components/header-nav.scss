@@ -23,3 +23,41 @@
     color: $color-white;
   }
 }
+
+.header-nav__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  border: none;
+}
+
+.header-nav--opened {
+  top: 65px;
+  right: auto;
+  left: 0;
+}
+
+.header-nav--closed .header-nav__toggle {
+  background: url("../img/menu-open.svg") no-repeat 50%;
+}
+
+.header-nav--opened .header-nav__toggle {
+  background: url("../img/icon-close.svg") no-repeat 50%;
+}
+
+@media (max-width: $mobile-width-only) {
+  .header-nav--closed .main-nav__item {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .header-nav__toggle {
+    display: none;
+  }
+}
