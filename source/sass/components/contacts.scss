@@ -18,7 +18,8 @@
   }
 }
 
-.cooperation-catalog {
+.cooperation-catalog,
+.cooperation-form {
   background: $bg-light;
   margin-top: 35px;
 }
@@ -30,6 +31,7 @@
     height: 198px;
     top: 25%;
     left: 110px;
+    background: $bg-white;
   }
 }
 
@@ -81,4 +83,5 @@
 .map iframe {
   border: none;
   display: block;
+  width: 100%;
 }

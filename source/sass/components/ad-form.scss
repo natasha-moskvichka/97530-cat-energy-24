@@ -65,6 +65,18 @@
   margin-left: 27px;
   border: 1px solid #e7e7e7;
   position: relative;
+
+  &:hover {
+    border-color: #cdcdcd;
+  }
+
+  &:focus {
+    border-color: #444444;
+  }
+}
+
+.private-information__input--error {
+  border: 1px solid #ff8282;
 }
 
 @media (min-width: $desktop-width) {
@@ -234,6 +246,10 @@
 
 .add-product--label {
   margin-left: 16px;
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 .ad-form__header--required {
@@ -330,6 +346,16 @@
   text-transform: uppercase;
   margin-bottom: 21px;
   border: 0;
+  cursor: pointer;
+
+  &:hover {
+    background: $bg-green--hover;
+  }
+
+  &:active {
+    background: $bg-green--hover;
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {

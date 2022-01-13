@@ -80,6 +80,14 @@
   text-transform: uppercase;
   color: $color-black;
   font-weight: 500;
+
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
 }
 
 @media (min-width: $tablet-width) {
@@ -101,5 +109,13 @@
 @media (min-width: $desktop-width) {
   .index-nav__list--item {
     color: $color-white;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    &:active {
+      color: rgba(255, 255, 255, 0.3);
+    }
   }
 }

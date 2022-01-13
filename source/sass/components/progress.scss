@@ -17,6 +17,23 @@
 
   .progress__container--img {
     width: 591px;
+    z-index: 1;
+  }
+}
+
+.progress__container {
+  z-index: 1;
+}
+
+@media (min-width: $tablet-width) {
+  .progress::before {
+    content: "";
+    width: 768px;
+    height: 45%;
+    background: $bg-primary;
+    position: absolute;
+    bottom: 0;
+    left: -30px;
   }
 }
 
@@ -28,6 +45,17 @@
     display: flex;
     justify-content: space-between;
     padding: 0;
+    position: relative;
+  }
+
+  .progress::before {
+    content: "";
+    width: 1920px;
+    height: 74%;
+    background: $bg-primary;
+    position: absolute;
+    bottom: 0;
+    left: -350px;
   }
 
   .progress__container--img {
@@ -95,7 +123,8 @@
 
 @media (min-width: $desktop-width) {
   .progress__description {
-    margin-bottom: 146px;
+    padding-top: 70px;
+    margin-bottom: 70px;
     width: 436px;
   }
 }
@@ -119,6 +148,7 @@
   .progress__stats {
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: 0;
   }
 }
 
@@ -211,6 +241,13 @@
   }
 }
 
+
+@media (min-width: $desktop-width) {
+  .progress__item--text {
+    background: $bg-primary;
+  }
+}
+
 .progress__total {
   font-size: 14px;
   line-height: 20px;
@@ -236,6 +273,7 @@
     line-height: 20px;
     text-align: left;
     width: inherit;
+    margin-bottom: 30px;
   }
 
   .progress__total--text {
@@ -251,6 +289,7 @@
 @media (min-width: $tablet-width) {
   .compare {
     margin-bottom: 60px;
+    z-index: 1;
   }
 }
 

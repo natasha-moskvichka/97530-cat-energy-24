@@ -149,11 +149,19 @@
 .additional-list__promo {
   width: 280px;
   height: 290px;
-  background: rgba(104, 183, 56, 0.85) url("../img/promo.svg") no-repeat;
-  background-blend-mode: overlay, color;
+  background: url("../img/promo.svg") no-repeat;
   display: grid;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.additional-list__promo::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgba(104, 183, 56, 0.85);
 }
 
 @media (min-width: $tablet-width) {
@@ -169,12 +177,14 @@
   .additional-list__promo {
     width: 245px;
     height: 288px;
+    background: url("../img/promo.svg") no-repeat;
     grid-template-columns: 1fr;
   }
 }
 
 .promo__picture {
   height: 80px;
+  z-index: 1;
   background: url("../img/icon_gift.svg") no-repeat 50%;
 }
 
@@ -312,6 +322,7 @@
   width: 160px;
   align-items: center;
   text-align: center;
+  z-index: 1;
 }
 
 @media (min-width: $tablet-width) {
