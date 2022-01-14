@@ -1,0 +1,23 @@
+@import "./../global/variables.scss";
+@import "../global/viewports.scss";
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: $tablet-width) {
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
