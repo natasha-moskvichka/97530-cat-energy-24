@@ -27,7 +27,7 @@
       <li class="main-nav__item">
         <a href="catalog.html" class="main-nav__item-title">Каталог продукции</a>
       </li>
-      <li class="main-nav__item main-nav__item--active">
+      <li class="main-nav__item item__active--white">
         <a class="main-nav__item-title">Подбор программы</a>
       </li>
     </ul>
@@ -61,21 +61,18 @@
 
         <fieldset class="ad-form__header data-module__list data-private">
           <div class="data-private__list">
-            <img src="./img/radiobutton-active.svg" width="30" height="31" alt="Выбрано">
-            <input type="radio" name="lose-weight" id="lose-weight" class="data-module__item--radiobutton">
-            <label class="ad-form__label" for="lose-weight">Похудение</label>
+            <input type="radio" name="advice" id="lose-weight" class="data-private__list--radio">
+            <label class="ad-form__label ad-form__label--radio" for="lose-weight">Похудение</label>
           </div>
 
           <div class="data-private__list">
-            <img src="./img/radiobutton.svg" width="30" height="31" alt="Не выбрано">
-            <input type="radio" name="add-weight" id="add-weight">
-            <label class="ad-form__label" for="add-weight">Набор массы</label>
+            <input type="radio" name="advice" id="add-weight" class="data-private__list--radio">
+            <label class="ad-form__label ad-form__label--radio" for="add-weight">Набор массы</label>
           </div>
 
           <div class="data-private__list">
-            <img src="./img/radiobutton.svg" width="30" height="31" alt="Не выбрано">
-            <input type="radio" name="unknown" id="unknown">
-            <label class="ad-form__label" for="unknown">Не знаю (нужен ваш совет)</label>
+            <input type="radio" name="advice" id="unknown" class="data-private__list--radio">
+            <label class="ad-form__label ad-form__label--radio" for="unknown">Не знаю (нужен ваш совет)</label>
           </div>
 
         </fieldset>
@@ -88,13 +85,13 @@
           <div class="data-private__list private-information">
             <label class="ad-form__label ad-form__label--contact private-information__label" for="email">E-mail:*</label>
             <input type="text" name="email" placeholder="kuklachev@gmail.com" id="email" class="private-information__input" required>
-            <img src="img/icon-email.svg" width="20" height="15" alt="Почта" class="private-information--icon">
+            <img src="img/icon-email.svg" width="20" height="15" alt="Почта" class="private-information__mail--icon">
           </div>
 
           <div class="data-private__list private-information">
             <label class="ad-form__label ad-form__label--contact private-information__label" for="phone">Телефон:*</label>
             <input type="text" name="phone" placeholder="8(960)900-60-90" id="phone" class="private-information__input" required>
-            <img src="img/icon-phone.svg" width="20" height="21" alt="Телефон" class="private-information--icon">
+            <img src="img/icon-phone.svg" width="20" height="21" alt="Телефон" class="private-information__phone--icon">
           </div>
         </fieldset>
 
@@ -113,25 +110,22 @@
           <div class="separator"></div>
           <div class="add-module__inner">
             <div class="add-module__inner--item add-product">
-              <input type="checkbox" name="no-sugar" id="no-sugar" class="add-product--input">
+              <input type="checkbox" name="no-sugar" id="no-sugar" class="add-product__checkbox">
               <label class="ad-form__label add-product--label" for="no-sugar">Сахарозаменитель</label>
             </div>
 
             <div class="add-module__inner--item add-product">
-              <img src="img/checkbox.svg" width="30" height="30" alt="Чекбокс">
-              <input type="checkbox" name="water" id="water">
+              <input type="checkbox" name="water" id="water" class="add-product__checkbox">
               <label class="ad-form__label add-product--label" for="water">Питьевая вода</label>
             </div>
 
             <div class="add-module__inner--item add-product">
-              <img src="img/checkbox.svg" width="30" height="30" alt="Чекбокс">
-              <input type="checkbox" name="milk" id="milk">
+              <input type="checkbox" name="milk" id="milk" class="add-product__checkbox">
               <label class="ad-form__label  add-product--label" for="milk">Молоко</label>
             </div>
 
             <div class="add-module__inner--item add-product">
-              <img src="img/checkbox.svg" width="30" height="30" alt="Чекбокс">
-              <input type="checkbox" name="vitamins" id="vitamins">
+              <input type="checkbox" name="vitamins" id="vitamins" class="add-product__checkbox">
               <label class="ad-form__label  add-product--label" for="vitamins">Витамины</label>
             </div>
           </div>

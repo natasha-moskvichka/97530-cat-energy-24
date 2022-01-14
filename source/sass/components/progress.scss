@@ -313,6 +313,28 @@
 
 .compare__result--input {
   appearance: none;
+  overflow: hidden;
+  width: 85px;
+  height: 14px;
+  background-color: $bg-white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.compare__result--input::-webkit-slider-runnable-track {
+  height: 14px;
+  margin-top: 7px;
+  padding: 0 6px;
+  appearance: none;
+}
+
+.compare__result--input::-webkit-slider-thumb {
+  width: 36px;
+  height: 6px;
+  cursor: ew-resize;
+  background: $bg-green;
+  border-radius: 6px;
+  appearance: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -321,6 +343,7 @@
     width: 426px;
     height: 34px;
     background-color: transparent;
+    border: 0;
   }
 
   .compare__result--input::-webkit-slider-runnable-track {
@@ -334,7 +357,7 @@
     height: 34px;
     cursor: ew-resize;
     border-radius: 50%;
-    margin-top: -14px;
+    margin-top: -17px;
     border: 1px solid #cdcdcd;
     background: $bg-white url("../img/slider-control.svg") no-repeat center;
     appearance: none;
