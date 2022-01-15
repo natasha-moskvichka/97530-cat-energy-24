@@ -10,9 +10,16 @@
 @media (min-width: $tablet-width) {
   .progress {
     background: $bg-white;
-    width: 708px;
-    margin: 0 auto;
     padding: 0;
+  }
+
+  .container::before {
+    content: "";
+    width: 100%;
+    height: 40%;
+    background: $bg-primary;
+    position: absolute;
+    bottom: 0;
   }
 
   .progress__container--img {
@@ -26,42 +33,40 @@
 }
 
 @media (min-width: $tablet-width) {
-  .progress::before {
-    content: "";
-    width: 768px;
-    height: 45%;
-    background: $bg-primary;
-    position: absolute;
-    bottom: 0;
-    left: -30px;
+  .progress__container {
+    width: 708px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .progress {
-    background: $bg-white;
-    width: 1220px;
-    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     padding: 0;
     position: relative;
+    background: $bg-white;
+    z-index: 1;
   }
 
-  .progress::before {
+  .progress__container {
+    width: 1220px;
+  }
+
+  .container::before {
     content: "";
-    width: 1920px;
+    width: 100%;
     height: 74%;
     background: $bg-primary;
     position: absolute;
+    z-index: -1;
     bottom: 0;
-    left: -350px;
   }
 
   .progress__container--img {
-    width: inherit;
+    width: 590px;
     position: absolute;
-    right: 0;
+    right: 108px;
     top: 0;
   }
 }
@@ -76,7 +81,7 @@
   .compare-box {
     flex-direction: row;
     align-items: flex-end;
-    width: 591px;
+    width: 100%;
   }
 }
 
@@ -99,7 +104,6 @@
 @media (min-width: $desktop-width) {
   .progress__title {
     margin: 43px 0 76px 0;
-    padding: 0;
   }
 }
 
@@ -313,6 +317,28 @@
 
 .compare__result--input {
   appearance: none;
+  overflow: hidden;
+  width: 85px;
+  height: 14px;
+  background-color: $bg-white;
+  border: 1px solid #cdcdcd;
+  border-radius: 6px;
+}
+
+.compare__result--input::-webkit-slider-runnable-track {
+  height: 14px;
+  margin-top: 7px;
+  padding: 0 6px;
+  appearance: none;
+}
+
+.compare__result--input::-webkit-slider-thumb {
+  width: 36px;
+  height: 6px;
+  cursor: ew-resize;
+  background: $bg-green;
+  border-radius: 6px;
+  appearance: none;
 }
 
 @media (min-width: $tablet-width) {
@@ -321,6 +347,7 @@
     width: 426px;
     height: 34px;
     background-color: transparent;
+    border: 0;
   }
 
   .compare__result--input::-webkit-slider-runnable-track {
@@ -334,7 +361,7 @@
     height: 34px;
     cursor: ew-resize;
     border-radius: 50%;
-    margin-top: -14px;
+    margin-top: -17px;
     border: 1px solid #cdcdcd;
     background: $bg-white url("../img/slider-control.svg") no-repeat center;
     appearance: none;
@@ -354,6 +381,7 @@
     width: inherit;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-end;
+    padding-right: 110px;
   }
 }

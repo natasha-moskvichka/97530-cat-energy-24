@@ -86,8 +86,12 @@
   }
 }
 
-.private-information--icon {
+.private-information__phone--icon,
+.private-information__mail--icon {
   position: absolute;
+}
+
+.private-information__phone--icon {
   right: 15px;
 }
 
@@ -101,6 +105,18 @@
   .data-module__list {
     width: 570px;
     height: 195px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .private-information__mail--icon {
+    right: 15px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .private-information__mail--icon {
+    left: 540px;
   }
 }
 
@@ -137,29 +153,49 @@
   margin-bottom: 20px;
 }
 
+.data-private__list--radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.data-private__list--radio + .ad-form__label--radio {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+}
+
+.data-private__list--radio + .ad-form__label--radio::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #cdcdcd;
+  border-radius: 50%;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.data-private__list--radio:not(:disabled):not(:checked) + .ad-form__label--radio:hover::before {
+  border-color: #bababa;
+}
+
+.data-private__list--radio:checked + .ad-form__label--radio::before {
+  background-image: url("../img/circle-green.svg");
+}
+
+.data-private__list--radio:disabled + .ad-form__label--radio::before {
+  border-color: #bababa;
+}
+
 @media (min-width: $desktop-width) {
   .contacts-module {
     width: inherit;
     flex-direction: row;
     justify-content: space-between;
   }
-}
-
-.ad-form__header input[type="radio"],
-.ad-form__header input[type="checkbox"] {
-  opacity: 0;
-}
-
-.add-product--input {
-  position: relative;
-}
-
-.add-product--input::before {
-  content: "";
-  position: absolute;
-  width: 40px;
-  height: 40px;
-  border: 1px solid #cdcdcd;
 }
 
 .ad-form__header-title {
@@ -240,16 +276,41 @@
   }
 }
 
+.add-product__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.add-product__checkbox + .add-product--label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.add-product__checkbox + .add-product--label::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid #cdcdcd;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.add-product__checkbox:checked + .add-product--label::before {
+  background-image: url("../img/tick.svg");
+}
+
 .add-module__inner--icon {
   position: absolute;
 }
 
 .add-product--label {
   margin-left: 16px;
-
-  &:active {
-    color: rgba(0, 0, 0, 0.3);
-  }
 }
 
 .ad-form__header--required {
