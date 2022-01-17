@@ -303,6 +303,7 @@
 
 .add-product__checkbox:checked + .add-product--label::before {
   background-image: url("../img/tick.svg");
+  background-size: 28px;
 }
 
 .add-module__inner--icon {
