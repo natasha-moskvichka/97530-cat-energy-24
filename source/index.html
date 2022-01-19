@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" href="favicon.png">
   <title>HTML Academy: Кэт энерджи</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -10,8 +12,13 @@
 
 <header class="page-header header-nav--closed main-nav--nojs">
   <a class="page-header__logo">
-    <img src="img/logo-header-img.svg" width="34" height="38" alt="Кэт Энерджи" class="page-header__logo--img">
-    <img src="img/logo-header-text.svg" width="101" height="18" alt="Кэт Энерджи" class="page-header__logo--text">
+    <picture>
+      <source media="(min-width: 1200px)" srcset="img/logo-desktop.svg">
+      <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+      <source media="(min-width: 320px)" srcset="img/logo-mobile.svg">
+      <!--<img src="img/logo-mobile.svg" width="34" height="38" alt="Кэт Энерджи" class="page-header__logo&#45;&#45;text">-->
+      <img src="img/logo-header-text.svg" alt="Кэт Энерджи" class="page-header__logo--text">
+    </picture>
   </a>
 
   <h2 class="visually-hidden page-header__title">Cat Energy</h2>
@@ -41,7 +48,12 @@
     <h1 class="visually-hidden">Правильное питание и сбалансированный рацион</h1>
     <p class="slogan__title">Функциональное питание для котов</p>
     <p class="slogan__intro">Занялся собой? Займись котом!</p>
-    <img src="./img/bg-header-food.svg" width="280" height="270" alt="Корм" class="slogan__img">
+
+    <picture>
+      <source media="(min-width: 1200px)" srcset="./img/index-cup-desktop-1x.png 1x, img/index-cup-desktop-2x.png 2x">
+      <source media="(min-width: 768px)" srcset="./img/index-cup-tablet-1x.png 1x, img/index-cup-tablet-2x.png 2x">
+      <img src="./img/index-cup-mobile-1x.png" class="slogan__img" alt="Корм" srcset="./img/index-cup-tablet-2x.png 2x">
+    </picture>
     <a href="catalog.html" class="button slogan__link-select">Подобрать программу</a>
   </section>
 
@@ -100,39 +112,43 @@
   <section class="progress">
 
     <div class="container">
-    <div class="progress__container">
-      <h2 class="progress__title">Живой пример</h2>
-      <p class="progress__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
-        Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&nbsp;-&nbsp;прежнему
-        спит по 16
-        часов в день. </p>
-      <div class="progress__stats">
-        <ul class="progress__list">
-          <li class="progress__item">
-            <p class="progress__item-details">5 кг</p>
-            <p class="progress__item--text">снижение веса</p>
-          </li>
-          <li class="progress__item">
-            <p class="progress__item-details">60 дней</p>
-            <p class="progress__item--text">затрачено времени</p>
-          </li>
-        </ul>
-        <p class="progress__total">
-          <span class="progress__total--text">Затраты на питание:</span>
-          <span>15 000 руб.</span>
-        </p>
+      <div class="progress__container">
+        <h2 class="progress__title">Живой пример</h2>
+        <p class="progress__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy
+          Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по&nbsp;-&nbsp;прежнему
+          спит по 16
+          часов в день. </p>
+        <div class="progress__stats">
+          <ul class="progress__list">
+            <li class="progress__item">
+              <p class="progress__item-details">5 кг</p>
+              <p class="progress__item--text">снижение веса</p>
+            </li>
+            <li class="progress__item">
+              <p class="progress__item-details">60 дней</p>
+              <p class="progress__item--text">затрачено времени</p>
+            </li>
+          </ul>
+          <p class="progress__total">
+            <span class="progress__total--text">Затраты на питание:</span>
+            <span>15 000 руб.</span>
+          </p>
+        </div>
       </div>
-    </div>
 
-    <div class="progress__container compare-box">
-      <img src="img/cat-before.svg" width="280" height="232" alt="Питомец до" class="progress__container--img">
-      <div class="compare">
-        <label class="compare__label">
-          <span class="compare__result">Было</span>
-          <input type="range" name="filter" min="0" max="2" value="1" class="compare__result--input">
-          <span class="compare__result">Стало</span></label>
+      <div class="progress__container compare-box">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="./img/index_cat_tablet-1x.png 1x, img/index_cat_tablet-2x.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/index_cat_tablet-1x.png 1x, img/index_cat_tablet-2x.png 2x">
+          <img src="./img/index_cat_mobile-1x.png" class="progress__container--img" alt="Питомец до" srcset="./img/index_cat_mobile-2x.png 2x">
+        </picture>
+        <div class="compare">
+          <label class="compare__label">
+            <span class="compare__result">Было</span>
+            <input type="range" name="filter" min="0" max="2" value="1" class="compare__result--input">
+            <span class="compare__result">Стало</span></label>
+        </div>
       </div>
-    </div>
     </div>
   </section>
 
