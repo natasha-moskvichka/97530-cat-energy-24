@@ -69,6 +69,7 @@
   .program__list {
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-column-gap: 80px;
   }
 }
 
