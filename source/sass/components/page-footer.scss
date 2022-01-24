@@ -42,6 +42,16 @@
   }
 }
 
+.footer-link__logo {
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
 .social__list {
   display: flex;
   justify-content: space-between;
@@ -107,7 +117,36 @@
   }
 }
 
-.page-footer__wrapper--picture {
+.page-footer__wrapper--logo {
   height: 95px;
   display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.social__link--facebook {
+  stroke: #666666;
+
+  &:hover {
+    stroke: $bg-green;
+  }
+
+  &:active {
+    stroke: $bg-green;
+    opacity: 0.4;
+  }
+}
+
+.copyright__link,
+.social__link {
+  fill: #666666;
+
+  &:hover {
+    fill: $bg-green;
+  }
+
+  &:active {
+    fill: $bg-green;
+    opacity: 0.4;
+  }
 }
