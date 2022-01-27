@@ -142,8 +142,8 @@
   }
 }
 
-.copyright__link,
-.social__link {
+.social__link > svg,
+.footer__icon-social {
   fill: #666666;
 
   &:hover {
@@ -151,7 +151,11 @@
   }
 
   &:active {
-    fill: $bg-green;
+    stroke: $bg-green;
     opacity: 0.4;
   }
+}
+
+.copyright__link:hover > svg {
+  fill: $bg-green;
 }
