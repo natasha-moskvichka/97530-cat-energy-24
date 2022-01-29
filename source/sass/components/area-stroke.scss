@@ -1,0 +1,14 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+.area-stroke {
+  border-top: 1px solid $border-lighter;
+  border-bottom: 1px solid $border-lighter;
+}
+
+@media (min-width: $tablet-width) {
+  .area-stroke {
+    border: 1px solid $border-lightest;
+    padding-left: 27px;
+  }
+}

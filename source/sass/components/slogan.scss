@@ -45,7 +45,7 @@
     height: 694px;
     position: absolute;
     right: 0;
-    top: -190px;
+    top: -288px;
     background: url("../img/index-background-desktop-2x.jpg") no-repeat;
     background-size: cover;
   }
@@ -131,7 +131,7 @@
 
 .slogan__link-select {
   width: 280px;
-  height: 40px;
+  min-height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -142,6 +142,7 @@
   color: $color-white;
   margin: 0 auto;
   text-transform: uppercase;
+  padding: 0 10px;
 
   &:hover {
     background: $bg-green--hover;
@@ -172,7 +173,6 @@
 .slogan__img {
   position: absolute;
   top: 160px;
-  margin-left: 6%;
 }
 
 @media (min-width: $tablet-width) {

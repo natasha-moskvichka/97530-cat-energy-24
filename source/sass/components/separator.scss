@@ -1,0 +1,24 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+.separator {
+  position: absolute;
+  width: 103%;
+}
+
+.separator::before {
+  content: "";
+  position: absolute;
+  width: inherit;
+  height: 2px;
+  background: $bg-green;
+  bottom: 44px;
+  z-index: -1;
+}
+
+@media (min-width: $desktop-width) {
+  .separator::before {
+    left: - 40px;
+    bottom: 52px;
+  }
+}

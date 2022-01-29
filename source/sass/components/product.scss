@@ -9,11 +9,11 @@
   align-items: center;
   justify-content: flex-end;
   margin-top: 8px;
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid $border-primary-lighter;
 }
 
 .product:first-child {
-  border-top: 1px solid #ebebeb;
+  border-top: 1px solid $border-primary-lighter;
 }
 
 @media (min-width: $tablet-width) {
@@ -44,14 +44,14 @@
 }
 
 @media (min-width: $tablet-width) {
-  .product-picture__500 {
+  .product-picture-500 {
     width: 161px;
     margin-top: -30px;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .product-picture__1000 {
+  .product-picture-1000 {
     width: 168px;
     margin-top: -50px;
   }
@@ -97,7 +97,7 @@
   }
 }
 
-.product__price--list {
+.product__price-list {
   font-family: "Arial", sans-serif;
   font-size: 12px;
   line-height: 16px;
@@ -109,14 +109,14 @@
 }
 
 @media (min-width: $tablet-width) {
-  .product__price--list {
+  .product__price-list {
     width: 250px;
     justify-content: space-between;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .product__price--list {
+  .product__price-list {
     width: 170px;
   }
 }
@@ -137,7 +137,7 @@
     font-size: 16px;
     line-height: 16px;
     padding: 7px 0 10px 0;
-    border-bottom: 1px solid #cdcdcd;
+    border-bottom: 1px solid $border-light;
     width: inherit;
   }
 
@@ -152,23 +152,24 @@
   }
 }
 
-.product-order__link,
+.product-order-link,
 .content-more__show,
 .additional-list__item-order {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 280px;
-  height: 40px;
+  min-height: 40px;
   text-transform: uppercase;
   text-decoration: none;
+  padding: 0 10px;
 }
 
 .additional-list__item-order {
   margin-bottom: 32px;
 }
 
-.product-order__link,
+.product-order-link,
 .additional-list__item-order {
   background-color: $bg-green;
   color: $color-white;
@@ -185,12 +186,12 @@
   }
 }
 
-.product-order__link {
+.product-order-link {
   margin: 14px 0 25px 0;
 }
 
 @media (min-width: $tablet-width) {
-  .product-order__link {
+  .product-order-link {
     margin: 33px 0 40px 0;
   }
 }
@@ -215,7 +216,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .product-order__link {
+  .product-order-link {
     width: 168px;
   }
 }

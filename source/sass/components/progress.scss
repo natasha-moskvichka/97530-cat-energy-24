@@ -22,7 +22,7 @@
     bottom: 0;
   }
 
-  .progress__container--img {
+  .progress__container-img {
     width: 591px;
     z-index: 1;
   }
@@ -183,7 +183,7 @@
 
 .progress__item {
   height: 56px;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $border-light;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
@@ -222,7 +222,7 @@
   }
 }
 
-.progress__item--text {
+.progress__item-text {
   font-size: 12px;
   line-height: 12px;
   color: $color-dark;
@@ -235,7 +235,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .progress__item--text {
+  .progress__item-text {
     background: $bg-white;
     font-size: 14px;
     line-height: 14px;
@@ -247,7 +247,7 @@
 
 
 @media (min-width: $desktop-width) {
-  .progress__item--text {
+  .progress__item-text {
     background: $bg-primary;
   }
 }
@@ -280,7 +280,7 @@
     margin-bottom: 30px;
   }
 
-  .progress__total--text {
+  .progress__total-text {
     margin-right: 63px;
   }
 }
@@ -306,7 +306,7 @@
 
 @media (min-width: $tablet-width) {
   .compare__result {
-    border-bottom: 1px dotted #dcdcdc;
+    border-bottom: 1px dotted $border-light;
   }
 }
 
@@ -315,24 +315,24 @@
   align-items: center;
 }
 
-.compare__result--input {
+.compare__result-input {
   appearance: none;
   overflow: hidden;
   width: 85px;
   height: 14px;
   background-color: $bg-white;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $border-light;
   border-radius: 6px;
 }
 
-.compare__result--input::-webkit-slider-runnable-track {
+.compare__result-input::-webkit-slider-runnable-track {
   height: 14px;
   margin-top: 7px;
   padding: 0 6px;
   appearance: none;
 }
 
-.compare__result--input::-webkit-slider-thumb {
+.compare__result-input::-webkit-slider-thumb {
   width: 36px;
   height: 6px;
   cursor: ew-resize;
@@ -342,7 +342,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .compare__result--input {
+  .compare__result-input {
     overflow: hidden;
     width: 426px;
     height: 34px;
@@ -350,19 +350,19 @@
     border: 0;
   }
 
-  .compare__result--input::-webkit-slider-runnable-track {
+  .compare__result-input::-webkit-slider-runnable-track {
     height: 6px;
-    background: #dcdcdc;
+    background: $bg-primary-light;
     border-radius: 6px;
   }
 
-  .compare__result--input::-webkit-slider-thumb {
+  .compare__result-input::-webkit-slider-thumb {
     width: 34px;
     height: 34px;
     cursor: ew-resize;
     border-radius: 50%;
     margin-top: -17px;
-    border: 1px solid #cdcdcd;
+    border: 1px solid $border-light;
     background: $bg-white url("../img/slider-control.svg") no-repeat center;
     appearance: none;
   }
