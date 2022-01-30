@@ -119,6 +119,19 @@
   }
 }
 
+.program__item-img {
+  width: 60px;
+  height: 60px;
+  background-color: $bg-green;
+}
+
+@media (min-width: $tablet-width) {
+  .program__item-img {
+    width: 80px;
+    height: 80px;
+  }
+}
+
 .program__item-description {
   font-family: "Arial", sans-serif;
   font-size: 14px;

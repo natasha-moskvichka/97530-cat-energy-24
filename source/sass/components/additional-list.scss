@@ -90,8 +90,8 @@
 
 @media (min-width: $desktop-width) {
   .additional__box {
-    height: 288px;
-    margin-bottom: 86px;
+    min-height: 288px;
+    /*margin-bottom: 86px;*/
   }
 }
 
@@ -116,7 +116,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 556px;
+    min-height: 556px;
     margin-bottom: 69px;
     padding: 0 38px 28px 38px;
     border: 1px solid $border-light;
@@ -126,7 +126,7 @@
 @media (min-width: $desktop-width) {
   .additional-list {
     width: 896px;
-    height: 288px;
+    min-height: 288px;
     padding: 0;
     border: none;
   }
@@ -148,7 +148,7 @@
 
 .additional-list-promo {
   width: 280px;
-  height: 290px;
+  min-height: 290px;
   background: url("../img/promo_1x.png") no-repeat;
   display: grid;
   justify-content: center;
@@ -168,7 +168,7 @@
   .additional-list-promo {
     background-image: url("../img/promo_2x.png");
     width: 100%;
-    height: 200px;
+    min-height: 200px;
     margin-bottom: 76px;
     grid-template-columns: 1fr 1fr;
   }
@@ -184,7 +184,7 @@
 @media (min-width: $desktop-width) {
   .additional-list-promo {
     width: 245px;
-    height: 288px;
+    min-height: 288px;
     grid-template-columns: 1fr;
     background-position: 50% 0;
     background-size: cover;
@@ -258,7 +258,9 @@
     display: flex;
     flex-direction: column;
     width: 632px;
+    min-height: 140px;
     position: relative;
+    border-bottom: none;
   }
 
   .additional-list__item:not(:first-child)::after {
@@ -274,10 +276,11 @@
 @media (min-width: $desktop-width) {
   .additional-list__item {
     width: inherit;
-    height: 72px;
+    min-height: 72px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    border-bottom: 1px solid $border-light;
   }
 
   .additional-list__item:not(:first-child)::after {
@@ -309,6 +312,7 @@
   line-height: 14px;
   color: $color-light;
   font-family: "Arial", sans-serif;
+  padding: 10px;
 }
 
 @media (min-width: $tablet-width) {
