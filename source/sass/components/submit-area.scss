@@ -1,0 +1,60 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+@media (min-width: $tablet-width) {
+  .submit-area {
+    flex-direction: row;
+    align-items: center;
+    height: 52px;
+    margin-bottom: 72px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .submit-area {
+    width: 1220px;
+    margin-top: 60px;
+  }
+}
+
+.ad-form__submit {
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 280px;
+  min-height: 40px;
+  background: $bg-green;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+  text-transform: uppercase;
+  margin-bottom: 21px;
+  border: 0;
+  cursor: pointer;
+  padding: 0 10px;
+
+  &:hover {
+    background: $bg-green--hover;
+  }
+
+  &:active {
+    background: $bg-green--hover;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__submit {
+    height: 52px;
+    font-size: 20px;
+    line-height: 0;
+    margin: 0 60px 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .ad-form__submit {
+    width: 568px;
+  }
+}

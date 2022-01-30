@@ -28,7 +28,7 @@
   .cooperation {
     position: absolute;
     width: 565px;
-    height: 198px;
+    min-height: 198px;
     top: 25%;
     left: 110px;
     background: $bg-white;
@@ -57,6 +57,7 @@
   font-size: 14px;
   line-height: 20px;
   color: $color-dark;
+  text-align: end;
 }
 
 @media (min-width: $tablet-width) {

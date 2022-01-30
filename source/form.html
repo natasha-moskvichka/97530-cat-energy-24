@@ -1,56 +1,52 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <title>Подбор программы</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="css/style.min.css" as="style">
+  <link rel="preload" href="fonts/oswaldregular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+  <title>HTML Academy: Кэт энерджи</title>
 </head>
 <body>
 
-<header class="page-header header-nav--closed main-nav--nojs">
-  <a class="page-header__logo">
-    <svg width="34" height="38" class="header-logo__mobile">
+<header class="page-header page-header--closed">
+  <a href="index.html" class="page-header__logo">
+    <svg width="34" height="38" class="page-header__logo-mobile">
       <use xlink:href="img/sprite.svg#logo-mobile"></use>
     </svg>
 
-    <svg width="101" height="18" class="header-logo__text">
+    <svg width="101" height="18" class="page-header__logo-text">
       <use xlink:href="img/sprite.svg#logo-header-text"></use>
     </svg>
 
-    <svg width="174" height="52" class="header-logo__tablet">
+    <svg width="174" height="52" class="page-header__logo-tablet">
       <use xlink:href="img/sprite.svg#logo-tablet"></use>
     </svg>
 
-    <svg width="202" height="60" class="header-logo__desktop">
+    <svg width="202" height="60" class="page-header__logo-desktop">
       <use xlink:href="img/sprite.svg#logo-desktop"></use>
     </svg>
-    <!-- <picture>
-       <source media="(min-width: 1200px)" srcset="img/img/sprite.svg#logo-desktop.svg">
-       <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-       <source media="(min-width: 320px)" srcset="img/logo-mobile.svg">
-       &lt;!&ndash;<img src="img/logo-mobile.svg" width="34" height="38" alt="Кэт Энерджи" class="page-header__logo&#45;&#45;text">&ndash;&gt;
-       <img src="img/logo-header-text.svg" alt="Кэт Энерджи" class="page-header__logo&#45;&#45;text">
-     </picture>-->
   </a>
 
   <h2 class="visually-hidden page-header__title">Cat Energy</h2>
 
-  <button class="header-nav__toggle" type="button">
+  <button class="page-header__toggle" type="button">
     <span class="visually-hidden">Открыть меню</span>
   </button>
 
   <nav class="header-nav">
-    <ul class="main-nav">
+    <ul class="main-nav list-highlight">
       <li class="main-nav__item">
         <a href="index.html" class="main-nav__item-title">Главная</a>
       </li>
       <li class="main-nav__item">
         <a href="catalog.html" class="main-nav__item-title">Каталог продукции</a>
       </li>
-      <li class="main-nav__item item__active--white">
-        <a class="main-nav__item-title">Подбор программы</a>
+      <li class="main-nav__item list-highlight__green">
+        <a href="#" class="main-nav__item-title">Подбор программы</a>
       </li>
     </ul>
   </nav>
@@ -66,34 +62,34 @@
       <div class="ad-form__wrapper data-module">
         <fieldset class="ad-form__header data-cat">
           <div class="data-cat__list private-information">
-            <label class="ad-form__label private-information__label" for="name-cat"> Имя:*</label>
-            <input type="text" name="name" placeholder="Барсик" id="name-cat" class="private-information__input" required>
+            <label class="ad-form__label" for="name-cat"> Имя:*</label>
+            <input type="text" name="name" placeholder="Барсик" id="name-cat" class="private-information-input" required>
           </div>
 
-          <div class="data-cat__list">
-            <label class="ad-form__label private-information__label" for="weight"> Вес (кг):* </label>
-            <input type="text" name="weight" id="weight" placeholder="7" class="private-information__input" required>
+          <div class="data-cat__list private-information">
+            <label class="ad-form__label" for="weight"> Вес (кг):* </label>
+            <input type="text" name="weight" id="weight" placeholder="7" class="private-information-input" required>
           </div>
 
-          <div class="data-cat__list">
-            <label class="ad-form__label private-information__label" for="age"> Возраст (лет):</label>
-            <input type="text" name="age" placeholder="7" id="age" class="private-information__input" required>
+          <div class="data-cat__list private-information">
+            <label class="ad-form__label" for="age"> Возраст (лет):</label>
+            <input type="text" name="age" placeholder="7" id="age" class="private-information-input" required>
           </div>
         </fieldset>
 
-        <fieldset class="ad-form__header data-module__list data-private">
+        <fieldset class="ad-form__header data-module__list data-private area-stroke">
           <div class="data-private__list">
-            <input type="radio" name="advice" id="lose-weight" class="data-private__list--radio">
+            <input type="radio" name="advice" id="lose-weight" class="data-private__list-radio">
             <label class="ad-form__label ad-form__label--radio" for="lose-weight">Похудение</label>
           </div>
 
           <div class="data-private__list">
-            <input type="radio" name="advice" id="add-weight" class="data-private__list--radio">
+            <input type="radio" name="advice" id="add-weight" class="data-private__list-radio">
             <label class="ad-form__label ad-form__label--radio" for="add-weight">Набор массы</label>
           </div>
 
           <div class="data-private__list">
-            <input type="radio" name="advice" id="unknown" class="data-private__list--radio">
+            <input type="radio" name="advice" id="unknown" class="data-private__list-radio">
             <label class="ad-form__label ad-form__label--radio" for="unknown">Не знаю (нужен ваш совет)</label>
           </div>
 
@@ -101,19 +97,23 @@
       </div>
 
       <div class="ad-form__wrapper">
-        <fieldset class="ad-form__header contacts-module">
+        <fieldset class="ad-form__header contacts-module data-private">
           <legend class="ad-form__header-title">Контактные данные (владельца кота)</legend>
           <div class="separator"></div>
           <div class="data-private__list private-information">
-            <label class="ad-form__label ad-form__label--contact private-information__label" for="email">E-mail:*</label>
-            <input type="text" name="email" placeholder="kuklachev@gmail.com" id="email" class="private-information__input" required>
-            <img src="img/icon-email.svg" width="20" height="15" alt="Почта" class="private-information__mail--icon">
+            <label class="ad-form__label ad-form__label--contact" for="email">E-mail:*</label>
+            <input type="text" name="email" placeholder="kuklachev@gmail.com" id="email" class="private-information-input" required>
+            <svg width="20" height="15" class="private-information__mail-icon">
+              <use xlink:href="img/sprite.svg#icon-email"></use>
+            </svg>
           </div>
 
           <div class="data-private__list private-information">
-            <label class="ad-form__label ad-form__label--contact private-information__label" for="phone">Телефон:*</label>
-            <input type="text" name="phone" placeholder="8(960)900-60-90" id="phone" class="private-information__input" required>
-            <img src="img/icon-phone.svg" width="20" height="21" alt="Телефон" class="private-information__phone--icon">
+            <label class="ad-form__label ad-form__label--contact" for="phone">Телефон:*</label>
+            <input type="text" name="phone" placeholder="8(960)900-60-90" id="phone" class="private-information-input" required>
+            <svg width="20" height="21" class="private-information__phone-icon">
+              <use xlink:href="img/sprite.svg#icon-phone"></use>
+            </svg>
           </div>
         </fieldset>
 
@@ -131,24 +131,24 @@
           <legend class="ad-form__header-title">Дополнительно</legend>
           <div class="separator"></div>
           <div class="add-module__inner">
-            <div class="add-module__inner--item add-product">
+            <div class="add-module__inner-item add-product">
               <input type="checkbox" name="no-sugar" id="no-sugar" class="add-product__checkbox">
-              <label class="ad-form__label add-product--label" for="no-sugar">Сахарозаменитель</label>
+              <label class="ad-form__label add-product-label" for="no-sugar">Сахарозаменитель</label>
             </div>
 
-            <div class="add-module__inner--item add-product">
+            <div class="add-module__inner-item add-product">
               <input type="checkbox" name="water" id="water" class="add-product__checkbox">
-              <label class="ad-form__label add-product--label" for="water">Питьевая вода</label>
+              <label class="ad-form__label add-product-label" for="water">Питьевая вода</label>
             </div>
 
-            <div class="add-module__inner--item add-product">
+            <div class="add-module__inner-item add-product">
               <input type="checkbox" name="milk" id="milk" class="add-product__checkbox">
-              <label class="ad-form__label  add-product--label" for="milk">Молоко</label>
+              <label class="ad-form__label  add-product-label" for="milk">Молоко</label>
             </div>
 
-            <div class="add-module__inner--item add-product">
+            <div class="add-module__inner-item add-product">
               <input type="checkbox" name="vitamins" id="vitamins" class="add-product__checkbox">
-              <label class="ad-form__label  add-product--label" for="vitamins">Витамины</label>
+              <label class="ad-form__label  add-product-label" for="vitamins">Витамины</label>
             </div>
           </div>
         </fieldset>
@@ -156,7 +156,7 @@
         <fieldset class="ad-form__header submit-area">
           <button type="submit" class="ad-form__submit">Отправить заявку</button>
 
-          <p class="ad-form__header--required">* - Обязательные поля</p>
+          <p class="ad-form__header-required">* - Обязательные поля</p>
         </fieldset>
       </div>
     </form>
@@ -185,9 +185,9 @@
 <footer class="page-footer">
   <div class="page-footer__wrapper">
     <h2 class="visually-hidden page-footer__title">Cat Energy</h2>
-    <div class="page-footer__wrapper--logo footer-link">
+    <div class="footer-link">
       <a class="footer-link__logo">
-        <svg width="101" height="18" class="footer-logo__text">
+        <svg width="101" height="18">
           <use xlink:href="img/sprite.svg#logo-text"></use>
         </svg>
       </a>
@@ -195,38 +195,40 @@
     <div class="page-footer__social social">
       <ul class="social__list">
         <li class="social__item">
-          <a href="https://vk.com/htmlacademy" class="social__link social__link--vkontakte">
-            <svg width="29" height="18" aria-label="Вконтакте">
+          <a href="https://vk.com/htmlacademy" class="social__link social__link-vk">
+            <svg class="social__link-vk" aria-label="Вконтакте">
               <use xlink:href="img/sprite.svg#vk"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://instagram.com/htmlacademy" class="social__link social__link--instagram">
-            <svg width="23" height="23" aria-label="Инстаграм">
+          <a href="https://instagram.com/htmlacademy" class="social__link">
+            <svg class="social__link-insta" aria-label="Инстаграм">
               <use xlink:href="img/sprite.svg#instagram"></use>
             </svg>
           </a>
         </li>
         <li class="social__item">
-          <a href="https://www.facebook.com/htmlacademy" class="social__link social__link--facebook">
-            <svg width="13" height="20" aria-label="Фейсбук">
+          <a href="https://www.facebook.com/htmlacademy" class="social__link">
+            <svg class="social__link-f" aria-label="Фейсбук">
               <use xlink:href="img/sprite.svg#facebook"></use>
             </svg>
           </a>
         </li>
       </ul>
     </div>
-    <div class="page-footer__copyright">
-      <p class="copyright__text">HTML Academy</p>
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <svg width="27" height="34" aria-label="HTML Academy" class="footer__icon-social">
+    <div class="page-footer__copyright copyright">
+      <p class="copyright-text">HTML Academy</p>
+      <a class="copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+        <svg class="copyright-link__svg" aria-label="HTML Academy">
           <use xlink:href="img/sprite.svg#html-academy"></use>
         </svg>
       </a>
     </div>
   </div>
 </footer>
+
+<script src="js/script.js"></script>
 
 </body>
 </html>

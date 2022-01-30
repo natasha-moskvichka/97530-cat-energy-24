@@ -1,0 +1,15 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+@media (min-width: $desktop-width) {
+  .data-module {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .data-module__list {
+    width: 570px;
+    min-height: 195px;
+  }
+}

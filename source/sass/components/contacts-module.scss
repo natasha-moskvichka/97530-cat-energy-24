@@ -1,0 +1,20 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+.contacts-module::after {
+  bottom: 195px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-module::after {
+    content: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-module {
+    width: inherit;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
