@@ -27,12 +27,19 @@
 }
 
 .content-more__show {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: $bg-light;
   color: $color-light;
   font-size: 16px;
   line-height: 20px;
   margin-bottom: 25px;
   width: 280px;
+  min-height: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
   cursor: pointer;
 
   &:hover {
@@ -47,14 +54,8 @@
 
 @media (min-width: $tablet-width) {
   .content-more__show {
-    width: 248px;
+    width: 250px;
     margin-bottom: 0;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .content-more__show {
-    width: 169px;
   }
 }
 
@@ -89,5 +90,11 @@
     line-height: 18px;
     margin: 23px 0 145px 0;
     width: 167px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .content-more__show {
+    width: 168px;
   }
 }

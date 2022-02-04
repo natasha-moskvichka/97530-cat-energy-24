@@ -1,0 +1,130 @@
+@import "../global/variables";
+@import "../global/viewports.scss";
+
+.compare-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: $desktop-width) {
+  .compare-box {
+    align-items: flex-end;
+    width: 100%;
+  }
+}
+
+.compare {
+  margin-top: 15px;
+  height: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .compare {
+    margin-bottom: 60px;
+    z-index: 1;
+  }
+}
+
+.compare__result {
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-black;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .compare__result {
+    border-bottom: 1px dotted $border-light;
+
+    &:hover {
+      border-bottom: 1px solid #919191;
+    }
+
+    &:active {
+      border-bottom: none;
+    }
+  }
+}
+
+.compare__label {
+  display: flex;
+  align-items: center;
+}
+
+.compare__result-input {
+  appearance: none;
+  overflow: hidden;
+  width: 85px;
+  height: 14px;
+  background-color: $bg-white;
+  border: 1px solid $border-light;
+  border-radius: 6px;
+}
+
+.compare__result-input::-webkit-slider-runnable-track {
+  height: 14px;
+  margin-top: 7px;
+  padding: 0 6px;
+  appearance: none;
+}
+
+.compare__result-input::-webkit-slider-thumb {
+  width: 36px;
+  height: 6px;
+  cursor: ew-resize;
+  background: $bg-green;
+  border-radius: 6px;
+  appearance: none;
+}
+
+.compare__result-input:disabled::-webkit-slider-thumb {
+  background: $bg-green;
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .compare__result-input {
+    overflow: hidden;
+    width: 426px;
+    height: 34px;
+    background-color: transparent;
+    border: 0;
+  }
+
+  .compare__result-input::-webkit-slider-runnable-track {
+    height: 6px;
+    background: $bg-primary-light;
+    border-radius: 6px;
+  }
+
+  .compare__result-input::-webkit-slider-thumb {
+    width: 34px;
+    height: 34px;
+    cursor: ew-resize;
+    border-radius: 50%;
+    margin-top: -17px;
+    border: 1px solid $border-light;
+    background: $bg-white url("../img/slider-control.svg") no-repeat center;
+    appearance: none;
+  }
+}
+
+.compare__result:first-child {
+  margin-right: 13px;
+}
+
+.compare__result:last-child {
+  margin-left: 13px;
+}
+
+@media (min-width: $desktop-width) {
+  .compare {
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 157px;
+    margin-top: 23px;
+  }
+}

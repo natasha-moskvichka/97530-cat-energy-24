@@ -1,15 +1,69 @@
 @import "./source/sass/global/variables.scss";
 @import "../global/viewports.scss";
 
+.data-module {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .data-module {
+    width: 630px;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .data-module {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    width: 1220px;
+    margin-bottom: 70px;
   }
 
   .data-module__list {
     width: 570px;
     min-height: 195px;
+  }
+}
+
+.data-module-box {
+  margin-bottom: 24px;
+  border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .data-module-box {
+    margin-bottom: 59px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .data-module-box {
+    margin-bottom: 0;
+  }
+}
+
+.data-module-box__list {
+  display: flex;
+  justify-content: space-between;
+  height: 45px;
+  margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .data-module-box__list {
+    height: 52px;
+    margin-bottom: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .data-module-box__list {
+    margin-bottom: 20px;
+  }
+
+  .data-module-box__list:last-child {
+    margin-bottom: 0;
   }
 }

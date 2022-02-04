@@ -1,0 +1,94 @@
+@import "../global/variables";
+@import "../global/viewports.scss";
+
+.characteristics:first-child {
+  border-top: 1px solid $border-light;
+}
+
+@media (min-width: $tablet-width) {
+  .characteristics:first-child {
+    border-top: none;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .characteristics:first-child {
+    border-top: 1px solid $border-light;
+  }
+}
+
+.characteristics {
+  border-bottom: 1px solid $border-light;
+}
+
+@media (min-width: $tablet-width) {
+  .characteristics {
+    display: flex;
+    flex-direction: column;
+    width: 632px;
+    min-height: 140px;
+    position: relative;
+    border-bottom: none;
+  }
+
+  .characteristics:not(:first-child)::after {
+    content: "";
+    width: 708px;
+    height: 1px;
+    background: $bg-lightest;
+    position: absolute;
+    left: -38px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .characteristics {
+    width: inherit;
+    min-height: 72px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid $border-light;
+  }
+
+  .characteristics:not(:first-child)::after {
+    content: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .characteristics__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .characteristics__list {
+    margin-bottom: 0;
+  }
+}
+
+.characteristics__list-title {
+  font-size: 16px;
+  line-height: 16px;
+  color: $color-dark;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin: 13px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .characteristics__list-title {
+    font-size: 20px;
+    line-height: 20px;
+    margin: 25px 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .characteristics__list-title {
+    width: 160px;
+  }
+}

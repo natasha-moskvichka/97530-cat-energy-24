@@ -1,24 +1,63 @@
 @import "./source/sass/global/variables.scss";
 @import "../global/viewports.scss";
 
-.separator {
+.separator,
+.separator-catalog {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-bottom: 26px;
+}
+
+.separator::before,
+.separator-catalog::before {
+  content: "";
   position: absolute;
-  width: 103%;
+  width: 60%;
+  height: 2px;
+  background: $bg-green;
+  right: 0;
 }
 
 .separator::before {
-  content: "";
-  position: absolute;
-  width: inherit;
-  height: 2px;
-  background: $bg-green;
-  bottom: 44px;
-  z-index: -1;
+  top: 13px;
+}
+
+.separator__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+  .separator__wrapper {
+    width: 630px;
+  }
+
+  .separator::before {
+    width: 100%;
+    top: 89px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .separator-catalog-wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .separator-catalog::before {
+    width: 100%;
+    top: 21px;
+  }
 }
 
 @media (min-width: $desktop-width) {
+  .separator__wrapper {
+    width: 1220px;
+  }
+
   .separator::before {
-    left: - 40px;
-    bottom: 52px;
+    top: 19px;
   }
 }

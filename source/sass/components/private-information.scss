@@ -1,7 +1,6 @@
 @import "./source/sass/global/variables.scss";
 @import "../global/viewports.scss";
 
-
 .private-information-input {
   width: 100%;
   height: inherit;
@@ -19,6 +18,21 @@
   }
 }
 
+.private-information-input::placeholder {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .private-information-input::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
 .private-information__input--error {
   border: 1px solid $border-error;
 }
@@ -26,6 +40,8 @@
 @media (min-width: $desktop-width) {
   .private-information-input {
     height: 52px;
-    width: 486px;
+    width: 434px;
+    display: flex;
+    flex-grow: 1;
   }
 }

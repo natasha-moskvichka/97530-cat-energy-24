@@ -14,7 +14,7 @@
 </head>
 <body>
 
-<header class="page-header page-header--closed">
+<header class="page-header page-header--opened page-header--nojs">
   <a href="#" class="page-header__logo">
     <svg width="34" height="38" class="page-header__logo-mobile">
       <use xlink:href="img/sprite.svg#logo-mobile"></use>
@@ -56,21 +56,26 @@
 
 <main class="page-main">
   <section class="slogan">
-    <div class="slogan__picture"></div>
-    <h1 class="visually-hidden">Правильное питание и сбалансированный рацион</h1>
-    <p class="slogan__title">Функциональное питание для котов</p>
-    <p class="slogan__intro">Занялся собой? Займись котом!</p>
+    <div class="slogan-container">
+      <div class="slogan-container__inner">
+        <h1 class="visually-hidden">Правильное питание и сбалансированный рацион</h1>
+        <p class="slogan__title">Функциональное питание для котов</p>
+        <p class="slogan__intro">Занялся собой? Займись котом!</p>
 
-    <picture>
-      <source type="image/webp" media="(min-width: 1220px)" srcset="./img/index-cup-desktop-1x.webp 1x, ./img/index-cup-desktop-2x.webp 2x">
-      <source type="image/webp" media="(min-width: 768px)" srcset="./img/index-cup-desktop-1x.webp 1x, ./img/index-cup-desktop-2x.webp 2x">
-      <source type="image/webp" srcset="./img/index-cup-desktop-1x.webp 1x, ./img/index-cup-desktop-2x.webp 2x">
+        <picture>
+          <source type="image/webp" media="(min-width: 1220px)" srcset="./img/index-cup-desktop-1x.webp 1x, ./img/index-cup-desktop-2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)" srcset="./img/index-cup-desktop-1x.webp 1x, ./img/index-cup-desktop-2x.webp 2x">
+          <source type="image/webp" srcset="./img/index-cup-desktop-1x.webp 1x, ./img/index-cup-desktop-2x.webp 2x">
 
-      <source media="(min-width: 1220px)" srcset="./img/index-cup-desktop-1x.png 1x, img/index-cup-desktop-2x.png 2x">
-      <source media="(min-width: 768px)" srcset="./img/index-cup-tablet-1x.png 1x, img/index-cup-tablet-2x.png 2x">
-      <img src="./img/index-cup-mobile-1x.png" class="slogan__img" width="280" height="270" alt="Корм" srcset="./img/index-cup-mobile-2x.png 2x">
-    </picture>
-    <a href="catalog.html" class="button slogan__link-select">Подобрать программу</a>
+          <source media="(min-width: 1220px)" srcset="./img/index-cup-desktop-1x.png 1x, img/index-cup-desktop-2x.png 2x">
+          <source media="(min-width: 768px)" srcset="./img/index-cup-tablet-1x.png 1x, img/index-cup-tablet-2x.png 2x">
+          <img src="./img/index-cup-mobile-1x.png" class="slogan__img" width="280" height="270" alt="Корм" srcset="./img/index-cup-mobile-2x.png 2x">
+        </picture>
+        <a href="catalog.html" class="button slogan__link-select">Подобрать программу</a>
+      </div>
+
+      <div class="slogan-picture"></div>
+    </div>
   </section>
 
   <section class="catalog">
@@ -85,7 +90,11 @@
           <h3 class="catalog__title">Похудение</h3>
           <p class="catalog__description">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям?
             Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a href="form.html" class="button catalog__slim">Каталог Slim</a>
+          <a href="catalog.html" class="button catalog__slim">Каталог Slim
+            <svg class="catalog__item-svg">
+              <use xlink:href="img/sprite.svg#icon_arrow"></use>
+            </svg>
+          </a>
         </li>
         <li class="catalog__item catalog__item--pro catalog-pro">
           <div class="catalog-pro__header-picture">
@@ -96,7 +105,10 @@
           <h3 class="catalog__title">Набор массы</h3>
           <p class="catalog__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro
             поможет вашему коту нарастить необходимые мышцы!</p>
-          <a href="catalog.html" class="button catalog__pro">Каталог Pro</a>
+          <a href="catalog.html" class="button catalog__pro">Каталог Pro
+            <svg class="catalog__item-svg">
+              <use xlink:href="img/sprite.svg#icon_arrow"></use>
+            </svg></a>
         </li>
       </ul>
     </div>
@@ -178,7 +190,8 @@
           <label class="compare__label">
             <span class="compare__result">Было</span>
             <input type="range" name="filter" min="0" max="2" value="1" class="compare__result-input">
-            <span class="compare__result">Стало</span></label>
+            <span class="compare__result">Стало</span>
+          </label>
         </div>
       </div>
     </div>
@@ -186,7 +199,7 @@
 
   <section class="contacts">
     <div class="cooperation">
-      <h4 class="cooperation__title">Приглашаем к сотрудничеству дилеров!</h4>
+      <h4 class="cooperation__title">Приглашаем к&nbsp;сотрудничеству дилеров!</h4>
       <p class="cooperation__address">
         ул. Большая<br>
         Конюшенная,&nbsp;д.&nbsp;19/8<br>

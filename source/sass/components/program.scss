@@ -53,6 +53,12 @@
   }
 }
 
+@media (min-width: $desktop-width) {
+  .program__title {
+    margin-bottom: 40px;
+  }
+}
+
 .program__list {
   display: grid;
   position: relative;
@@ -145,5 +151,11 @@
     font-size: 16px;
     line-height: 24px;
     margin-left: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .program__item-description {
+    margin-bottom: 43px;
   }
 }

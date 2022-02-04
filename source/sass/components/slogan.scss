@@ -5,53 +5,25 @@
   position: relative;
 }
 
-@media (min-width: $tablet-width) {
-  .slogan {
-    width: 708px;
-    min-height: 826px;
-    padding-left: 80px;
-  }
+.slogan-container {
+  display: flex;
 }
 
-@media (min-width: $desktop-width) {
-  .slogan {
-    width: 1440px;
-    min-height: 570px;
-    margin: 0 auto;
-    padding-left: 0;
-  }
-}
-
-.slogan__picture {
+.slogan-container__inner1 {
   position: absolute;
-  width: 100%;
-  min-height: 302px;
-  background-image: url("../img/index-background-mobile-1x.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  top: 0;
   z-index: -1;
 }
 
-@media (min-width: $tablet-width) {
-  .slogan__picture {
-    width: 628px;
-    background-image: none;
-  }
+.slogan-container__inner1::before {
+  content: "";
+  background-color: rgba(104, 183, 56, 0.85);
+  width: 100%;
+  height: 100%;
+  position: absolute;
 }
 
-@media (min-width: $desktop-width) {
-  .slogan__picture {
-    width: 720px;
-    height: 694px;
-    position: absolute;
-    right: 0;
-    top: -288px;
-    background: url("../img/index-background-desktop-2x.jpg") no-repeat;
-    background-size: cover;
-  }
-}
-
-.slogan__picture::before {
+.slogan-picture::before {
   content: "";
   background-color: rgba(104, 183, 56, 0.85);
   width: 100%;
@@ -60,18 +32,65 @@
 }
 
 @media (min-width: $tablet-width) {
-  .slogan__picture::before {
-    background: $bg-white;
+  .slogan {
+    min-height: 826px;
+    padding-left: 117px;
+  }
+
+  .slogan-container__inner1 {
+    display: none;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .slogan__picture::before {
-    content: "";
-    background-color: rgba(104, 183, 56, 0.85);
-    width: 100%;
-    height: 100%;
+  .slogan {
+    min-height: 570px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .slogan-container__inner1 {
+    display: block;
     position: absolute;
+    right: 0;
+    top: -239px;
+  }
+
+  .slogan-container__inner1 img {
+    width: 100%;
+  }
+}
+
+.slogan-picture {
+  width: 100%;
+  height: 302px;
+  position: absolute;
+  z-index: -1;
+  background-image: url("../img/index-background-mobile-1x.jpg");
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/index-background-mobile-2x.jpg");
+    background-size: 320px auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    display: flex;
+    right: 0;
+    top: -239px;
+    width: 720px;
+    height: 694px;
+    background-image: url("../img/index-background-desktop-1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-background-desktop-2x.jpg");
+      background-size: 720px auto;
+    }
   }
 }
 
@@ -97,7 +116,7 @@
 
 @media (min-width: $desktop-width) {
   .slogan__title {
-    margin-top: 110px;
+    margin-top: 62px;
     width: 620px;
     padding-left: 190px;
   }
@@ -179,7 +198,8 @@
   .slogan__img {
     width: 709px;
     height: 609px;
-    top: 216px;
+    top: 197px;
+    left: 0;
     margin-left: 0;
     z-index: -1;
   }
@@ -190,7 +210,8 @@
     width: 552px;
     height: 499px;
     position: absolute;
-    top: -64px;
-    left: 40%;
+    top: -22px;
+    left: 39%;
+    z-index: 2;
   }
 }

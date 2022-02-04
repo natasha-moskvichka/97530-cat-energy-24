@@ -19,20 +19,30 @@
     width: 708px;
     font-size: 60px;
     line-height: 60px;
-    padding-bottom: 82px;
+    padding-bottom: 111px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-main__title {
     width: 1220px;
-    padding-bottom: 84px;
+    padding-bottom: 126px;
   }
 }
 
 @media (min-width: $tablet-width) {
   .page-main {
     padding: 0;
-    margin: 65px 0 0 0;
+    margin: 51px 0 0 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    margin-top: 50px;
+  }
+
+  .page-main-form {
+    margin-top: 102px;
   }
 }

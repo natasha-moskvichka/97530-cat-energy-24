@@ -26,7 +26,7 @@
   .page-header {
     width: 1220px;
     margin: 0 auto;
-    padding: 70px 20px 0 20px;
+    padding: 55px 0 0 0;
   }
 }
 
@@ -90,4 +90,43 @@
 
 .page-header__logo--text {
   margin-left: 55px;
+}
+
+.page-header__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 65px;
+  height: 65px;
+  cursor: pointer;
+  border: none;
+}
+
+.page-header--opened {
+  top: 65px;
+  right: auto;
+  left: 0;
+}
+
+.page-header--closed .page-header__toggle {
+  background: url("../img/menu-open.svg") no-repeat 50%;
+}
+
+.page-header--opened .page-header__toggle {
+  background: url("../img/menu-close.svg") no-repeat 50%;
+  opacity: 0;
+}
+
+@media (max-width: $mobile-width-only) {
+  .page-header--closed .main-nav__item {
+    display: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__toggle {
+    display: none;
+  }
 }
