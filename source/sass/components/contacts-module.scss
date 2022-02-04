@@ -1,20 +1,140 @@
 @import "./source/sass/global/variables.scss";
 @import "../global/viewports.scss";
 
-.contacts-module::after {
-  bottom: 195px;
+.contacts-module {
+  display: flex;
+  height: 45px;
+  width: 280px;
+  margin: 0 auto;
+}
+
+.contacts-module-label {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
 }
 
 @media (min-width: $tablet-width) {
-  .contacts-module::after {
-    content: none;
+  .contacts-module-label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.contacts-module-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-module:last-child {
+  margin-top: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-module {
+    height: 52px;
+    width: 630px;
+  }
+
+  .contacts-module:last-child {
+    margin-top: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .contacts-module {
-    width: inherit;
+  .contacts-module-box {
     flex-direction: row;
-    justify-content: space-between;
+  }
+
+  .contacts-module:last-child {
+    margin-top: 0;
+  }
+}
+
+.contacts-module__phone-icon,
+.contacts-module__mail-icon {
+  position: absolute;
+  right: 16px;
+}
+
+.contacts-module__mail-icon {
+  top: 13px;
+}
+
+.contacts-module__phone-icon {
+  top: 69px;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-module__phone-icon,
+  .contacts-module__mail-icon {
+    right: 53px;
+  }
+
+  .contacts-module__mail-icon {
+    top: 18px;
+  }
+
+  .contacts-module__phone-icon {
+    top: 88px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-module__phone-icon {
+    right: 56px;
+    top: 16px;
+  }
+
+  .contacts-module__mail-icon {
+    right: 708px;
+  }
+}
+
+.contacts-module-input {
+  width: 100%;
+  height: inherit;
+  padding: 0 20px;
+  margin-left: 20px;
+  border: 1px solid $border-lightest;
+  position: relative;
+
+  &:hover {
+    border-color: $border-light;
+  }
+
+  &:focus {
+    border-color: $border-dark;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-module-input {
+    width: 550px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts-module-input {
+    width: 486px;
+  }
+}
+
+.contacts-module-input::placeholder {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  text-transform: uppercase;
+}
+
+@media (min-width: $tablet-width) {
+  .contacts-module-input::placeholder {
+    font-size: 20px;
+    line-height: 30px;
   }
 }

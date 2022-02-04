@@ -12,7 +12,7 @@
 </head>
 <body>
 
-<header class="page-header page-header--closed">
+<header class="page-header page-header--opened page-header--nojs">
   <a href="index.html" class="page-header__logo">
     <svg width="34" height="38" class="page-header__logo-mobile">
       <use xlink:href="img/sprite.svg#logo-mobile"></use>
@@ -52,113 +52,139 @@
   </nav>
 </header>
 
-<main class="page-main">
+<main class="page-main page-main-form">
 
   <section class="selection-program">
     <h1 class="selection-program__title">Подбор программы</h1>
     <p class="selection-program__text">Заполните анкету, и мы подберем программу питания для вашего кота</p>
     <form method="post" action="https://echo.htmlacademy.ru" class="ad-form" name="main-form" autocomplete="off">
 
-      <div class="ad-form__wrapper data-module">
-        <fieldset class="ad-form__header data-cat">
-          <div class="data-cat__list private-information">
+      <div class="data-module">
+        <fieldset class="data-module-box">
+          <div class="data-module-box__list private-information">
             <label class="ad-form__label" for="name-cat"> Имя:*</label>
             <input type="text" name="name" placeholder="Барсик" id="name-cat" class="private-information-input" required>
           </div>
 
-          <div class="data-cat__list private-information">
+          <div class="data-module-box__list private-information">
             <label class="ad-form__label" for="weight"> Вес (кг):* </label>
             <input type="text" name="weight" id="weight" placeholder="7" class="private-information-input" required>
           </div>
 
-          <div class="data-cat__list private-information">
+          <div class="data-module-box__list private-information">
             <label class="ad-form__label" for="age"> Возраст (лет):</label>
             <input type="text" name="age" placeholder="7" id="age" class="private-information-input" required>
           </div>
         </fieldset>
-
-        <fieldset class="ad-form__header data-module__list data-private area-stroke">
-          <div class="data-private__list">
-            <input type="radio" name="advice" id="lose-weight" class="data-private__list-radio">
-            <label class="ad-form__label ad-form__label--radio" for="lose-weight">Похудение</label>
+        <fieldset class="option-module">
+          <div class="option-module__list">
+            <input type="radio" name="advice" id="lose-weight" tabindex="0" class="option-module__list-radio" checked>
+            <label class="ad-form__label ad-form__label--radio" for="lose-weight">Похудение
+              <svg width="101" height="18" class="ad-form__label-svg">
+                <use xlink:href="img/sprite.svg#circle-green"></use>
+              </svg>
+            </label>
           </div>
 
-          <div class="data-private__list">
-            <input type="radio" name="advice" id="add-weight" class="data-private__list-radio">
-            <label class="ad-form__label ad-form__label--radio" for="add-weight">Набор массы</label>
+          <div class="option-module__list">
+            <input type="radio" name="advice" id="add-weight" tabindex="0" class="option-module__list-radio">
+            <label class="ad-form__label ad-form__label--radio" for="add-weight">Набор массы
+              <svg width="101" height="18" class="ad-form__label-svg">
+                <use xlink:href="img/sprite.svg#circle-green"></use>
+              </svg>
+            </label>
           </div>
 
-          <div class="data-private__list">
-            <input type="radio" name="advice" id="unknown" class="data-private__list-radio">
-            <label class="ad-form__label ad-form__label--radio" for="unknown">Не знаю (нужен ваш совет)</label>
+          <div class="option-module__list">
+            <input type="radio" name="advice" id="unknown" tabindex="0" class="option-module__list-radio">
+            <label class="ad-form__label ad-form__label--radio" for="unknown">Не знаю (нужен ваш совет)
+              <svg width="101" height="18" class="ad-form__label-svg">
+                <use xlink:href="img/sprite.svg#circle-green"></use>
+              </svg>
+            </label>
           </div>
 
         </fieldset>
       </div>
 
-      <div class="ad-form__wrapper">
-        <fieldset class="ad-form__header contacts-module data-private">
-          <legend class="ad-form__header-title">Контактные данные (владельца кота)</legend>
-          <div class="separator"></div>
-          <div class="data-private__list private-information">
-            <label class="ad-form__label ad-form__label--contact" for="email">E-mail:*</label>
-            <input type="text" name="email" placeholder="kuklachev@gmail.com" id="email" class="private-information-input" required>
-            <svg width="20" height="15" class="private-information__mail-icon">
-              <use xlink:href="img/sprite.svg#icon-email"></use>
-            </svg>
-          </div>
-
-          <div class="data-private__list private-information">
-            <label class="ad-form__label ad-form__label--contact" for="phone">Телефон:*</label>
-            <input type="text" name="phone" placeholder="8(960)900-60-90" id="phone" class="private-information-input" required>
-            <svg width="20" height="21" class="private-information__phone-icon">
-              <use xlink:href="img/sprite.svg#icon-phone"></use>
-            </svg>
-          </div>
-        </fieldset>
-
-        <fieldset class="ad-form__header textarea-module">
-          <legend class="ad-form__header-title">Комментарий</legend>
-          <div class="separator"></div>
-          <label class="ad-form__label">
-            <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
-          </label>
-        </fieldset>
+      <div class="separator">
+        <div class="separator__wrapper">
+        <div class="ad-form__wrapper">
+          <fieldset class="ad-form__header">
+            <legend class="ad-form__header-title ad-form__header-legend">Контактные данные (владельца кота)</legend>
+            <div class="contacts-module-box">
+              <div class="contacts-module">
+                <label class="contacts-module-label" for="email">E-mail:*</label>
+                <input type="text" name="email" placeholder="kuklachev@gmail.com" id="email"
+                        class="contacts-module-input" required>
+                  <svg width="20" height="15" class="contacts-module__mail-icon">
+                  <use xlink:href="img/sprite.svg#icon-email"></use>
+                </svg>
+              </div>
+              <div class="contacts-module">
+                <label class="contacts-module-label" for="phone">Телефон:*</label>
+                <input type="text" name="phone" placeholder="8 (960) 900-60-90" id="phone" class="contacts-module-input"
+                        required>
+                  <svg width="20" height="21" class="contacts-module__phone-icon">
+                  <use xlink:href="img/sprite.svg#icon-phone"></use>
+                </svg>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        </div>
       </div>
 
-      <div class="ad-form__wrapper">
-        <fieldset class="ad-form__header add-module">
-          <legend class="ad-form__header-title">Дополнительно</legend>
-          <div class="separator"></div>
-          <div class="add-module__inner">
-            <div class="add-module__inner-item add-product">
-              <input type="checkbox" name="no-sugar" id="no-sugar" class="add-product__checkbox">
-              <label class="ad-form__label add-product-label" for="no-sugar">Сахарозаменитель</label>
-            </div>
-
-            <div class="add-module__inner-item add-product">
-              <input type="checkbox" name="water" id="water" class="add-product__checkbox">
-              <label class="ad-form__label add-product-label" for="water">Питьевая вода</label>
-            </div>
-
-            <div class="add-module__inner-item add-product">
-              <input type="checkbox" name="milk" id="milk" class="add-product__checkbox">
-              <label class="ad-form__label  add-product-label" for="milk">Молоко</label>
-            </div>
-
-            <div class="add-module__inner-item add-product">
-              <input type="checkbox" name="vitamins" id="vitamins" class="add-product__checkbox">
-              <label class="ad-form__label  add-product-label" for="vitamins">Витамины</label>
-            </div>
-          </div>
-        </fieldset>
-
-        <fieldset class="ad-form__header submit-area">
-          <button type="submit" class="ad-form__submit">Отправить заявку</button>
-
-          <p class="ad-form__header-required">* - Обязательные поля</p>
-        </fieldset>
+      <div class="separator">
+        <div class="separator__wrapper">
+        <div class="ad-form__wrapper">
+          <fieldset class="ad-form__header textarea-module">
+            <legend class="ad-form__header-title ad-form__header-legend">Комментарий</legend>
+            <label class="ad-form__label textarea-module__content">
+              <textarea placeholder="Расскажите обо всех повадках кота"></textarea>
+            </label>
+          </fieldset>
+        </div>
+        </div>
       </div>
+
+      <div class="separator">
+        <div class="separator__wrapper">
+        <div class="ad-form__wrapper">
+          <fieldset class="ad-form__header add-module">
+            <legend class="ad-form__header-title ad-form__header-capture">Дополнительно</legend>
+            <div class="add-module__inner">
+              <div class="add-module__inner-item add-product">
+                <input type="checkbox" name="no-sugar" id="no-sugar" tabindex="0" class="add-product__checkbox" checked>
+                <label class="add-product-label" for="no-sugar">Сахарозаменитель</label>
+              </div>
+
+              <div class="add-module__inner-item add-product">
+                <input type="checkbox" name="water" id="water" tabindex="0" class="add-product__checkbox">
+                <label class="add-product-label" for="water">Питьевая вода</label>
+              </div>
+
+              <div class="add-module__inner-item add-product">
+                <input type="checkbox" name="milk" id="milk" tabindex="0" class="add-product__checkbox">
+                <label class="add-product-label" for="milk">Молоко</label>
+              </div>
+
+              <div class="add-module__inner-item add-product">
+                <input type="checkbox" name="vitamins" id="vitamins"tabindex="0"  class="add-product__checkbox">
+                <label class="add-product-label" for="vitamins">Витамины</label>
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="ad-form__header submit-area">
+            <button type="submit" class="submit-area-submit">Отправить заявку</button>
+
+            <p class="ad-form__header-required">* - Обязательные поля</p>
+          </fieldset>
+        </div>
+        </div>
+      </div>
+
     </form>
   </section>
 

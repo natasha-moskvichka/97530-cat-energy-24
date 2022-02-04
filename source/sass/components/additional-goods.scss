@@ -1,0 +1,47 @@
+@import "../global/variables";
+@import "../global/viewports.scss";
+
+.additional-goods {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-goods {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-goods {
+    width: 490px;
+    justify-content: flex-end;
+  }
+}
+
+.additional-goods__info {
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-light;
+  font-family: "Arial", sans-serif;
+  padding: 10px 10px 10px 0;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-goods__info:last-child {
+    margin-left: 55px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .additional-goods__info {
+    width: 140px;
+  }
+
+  .additional-goods__info:last-child {
+    margin-left: 55px;
+    text-align: right;
+    padding-right: 50px;
+  }
+}

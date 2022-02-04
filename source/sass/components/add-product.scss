@@ -1,0 +1,53 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+.add-product-label {
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+@media (min-width: $tablet-width) {
+  .add-product-label {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.add-product__checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.add-product__checkbox + .add-product-label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.add-product__checkbox + .add-product-label::before {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid $border-light;
+  margin-right: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+}
+
+.add-product__checkbox:focus + .add-product-label::before {
+  border: 1px solid $border-dark;
+}
+
+.add-product__checkbox:checked + .add-product-label::before {
+  background-image: url("../img/tick.svg");
+  background-size: 28px;
+}

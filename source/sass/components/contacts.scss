@@ -24,6 +24,12 @@
   margin-top: 35px;
 }
 
+@media (min-width: $tablet-width) {
+  .cooperation-catalog {
+    margin-top: 0;
+  }
+}
+
 @media (min-width: $desktop-width) {
   .cooperation {
     position: absolute;
@@ -67,10 +73,10 @@
   }
 }
 
-@media (min-width: $tablet-width) {
-  .cooperation__title {
-    font-size: 16px;
-    line-height: 20px;
+@media (min-width: $desktop-width) {
+  .cooperation__address {
+    text-align: left;
+    padding-left: 47px;
   }
 }
 
@@ -78,6 +84,7 @@
   .cooperation__title {
     font-size: 20px;
     line-height: 26px;
+    padding: 5px 10px;
   }
 }
 

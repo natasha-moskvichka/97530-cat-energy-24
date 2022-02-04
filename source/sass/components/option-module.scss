@@ -1,0 +1,113 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+.option-module {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .option-module {
+    width: 630px;
+    margin: 0 auto;
+    padding: 22px;
+    border: 1px solid $border-lightest;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .option-module {
+    width: 570px;
+    min-height: 195px;
+    margin: 0;
+  }
+}
+
+.option-module__list {
+  display: flex;
+  height: 45px;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+@media (min-width: $desktop-width) {
+  .option-module__list {
+    padding-left: 0;
+  }
+}
+
+.option-module__list:last-child {
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .option-module__list {
+    margin-bottom: 8px;
+  }
+
+  .option-module__list:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.option-module__list-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.option-module__list-radio + .ad-form__label--radio {
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+  position: relative;
+}
+
+.option-module__list-radio + .ad-form__label--radio::before {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border: 1px solid $border-light;
+  border-radius: 50%;
+  margin-right: 24px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  box-sizing: border-box;
+}
+
+.option-module__list-radio:focus + .ad-form__label--radio::before {
+  border: 1px solid $border-dark;
+}
+
+.ad-form__label-svg {
+  position: absolute;
+  left: 11px;
+  opacity: 0;
+}
+
+.option-module__list-radio:not(:disabled):not(:checked) + .ad-form__label--radio:hover::before {
+  border-color: $border-primary;
+}
+
+.option-module__list-radio:not(:disabled):checked + .ad-form__label--radio:active::before {
+  border-color: $border-primary;
+}
+
+.option-module__list-radio:checked + .ad-form__label--radio::before {
+  background-image: url("../img/circle-green.svg");
+}
+
+.option-module__list-radio:disabled + .ad-form__label--radio::before {
+  border-color: $border-primary;
+}
+
+@media (min-width: $tablet-width) {
+  .option-module__list-radio + .ad-form__label--radio::before {
+    width: 40px;
+    height: 40px;
+  }
+}

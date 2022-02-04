@@ -6,19 +6,20 @@
     flex-direction: row;
     align-items: center;
     height: 52px;
-    margin-bottom: 72px;
+    width: 630px;
+    margin: 0 auto;
   }
 }
 
 @media (min-width: $desktop-width) {
   .submit-area {
     width: 1220px;
-    margin-top: 60px;
+    margin-top: 56px;
   }
 }
 
-.ad-form__submit {
-  font-family: "Oswald", sans-serif;
+.submit-area-submit {
+  font-family: "Oswald", "Arial", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,16 +46,17 @@
 }
 
 @media (min-width: $tablet-width) {
-  .ad-form__submit {
+  .submit-area-submit {
     height: 52px;
     font-size: 20px;
     line-height: 0;
-    margin: 0 60px 0 0;
+    margin: 50px 60px 0 0;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .ad-form__submit {
+  .submit-area-submit {
     width: 568px;
+    margin: 0 60px 0 0;
   }
 }

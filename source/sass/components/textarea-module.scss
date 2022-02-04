@@ -1,0 +1,52 @@
+@import "./source/sass/global/variables.scss";
+@import "../global/viewports.scss";
+
+@media (min-width: $tablet-width) {
+  .textarea-module__content {
+    width: 630px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .textarea-module__content {
+    width: 1220px;
+  }
+}
+
+.ad-form__label textarea {
+  resize: none;
+  width: 280px;
+  height: 150px;
+  padding: 10px 18px;
+}
+
+@media (min-width: $tablet-width) {
+  .ad-form__label textarea {
+    width: 630px;
+    height: 175px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .ad-form__label textarea {
+    width: inherit;
+  }
+}
+
+.ad-form__label textarea::placeholder {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  color: $color-light;
+  text-transform: uppercase;
+}
+
+@media (min-width: $desktop-width) {
+  .ad-form__label textarea::placeholder {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
