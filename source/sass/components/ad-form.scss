@@ -11,11 +11,11 @@
 }
 
 .ad-form::before {
-  top: 424px;
+  top: 628px;
 }
 
 .ad-form::after {
-  bottom: -90px;
+  bottom: -264px;
 }
 
 @media (min-width: $tablet-width) {
@@ -79,6 +79,10 @@
 
 .ad-form__header-legend {
   margin-bottom: 48px;
+  width: auto;
+}
+
+.ad-form__header-style {
   width: 220px;
 }
 
