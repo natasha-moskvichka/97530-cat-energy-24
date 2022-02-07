@@ -88,6 +88,31 @@
   }
 }
 
+.map {
+  background: url("../img/map-mobile_1x.png") no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background: url("../img/map-mobile_2x.png") no-repeat;
+    background-size: 320px auto;
+  }
+
+  @media (min-width: $tablet-width) {
+    background: url("../img/map-tablet_1x.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/map-tablet_2x.png") no-repeat;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    background: url("../img/map-desktop_1x.png") no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background: url("../img/map-desktop_2x.png") no-repeat;
+    }
+  }
+}
+
 .map iframe {
   border: none;
   display: block;

@@ -1,6 +1,10 @@
 @import "./source/sass/global/variables.scss";
 @import "../global/viewports.scss";
 
+.ad-form {
+  position: relative;
+}
+
 .ad-form::before,
 .ad-form::after {
   content: "";
@@ -11,11 +15,11 @@
 }
 
 .ad-form::before {
-  top: 628px;
+  top: 189px;
 }
 
 .ad-form::after {
-  bottom: -264px;
+  top: 371px;
 }
 
 @media (min-width: $tablet-width) {
